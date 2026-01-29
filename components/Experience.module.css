@@ -1,0 +1,26 @@
+.block {
+  margin-bottom: 3rem;
+}
+
+.blockTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.item {
+  margin-bottom: 1.8rem;
+}
+
+.year {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.item h4 {
+  margin: 0.4rem 0;
+}
+
+.item p {
+  color: var(--text-secondary);
+  max-width: 650px;
+}

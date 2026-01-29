@@ -1,0 +1,73 @@
+.resume {
+  padding: 80px 20px;
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+}
+
+.content p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #6366f1, #a855f7);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+}
+
+.downloadBtn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .resume {
+    padding: 60px 20px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .downloadBtn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
