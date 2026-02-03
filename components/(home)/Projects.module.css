@@ -1,0 +1,270 @@
+.projects {
+  padding: 120px 20px;
+  position: relative;
+}
+
+/* Top divider */
+.projects::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-color),
+    transparent
+  );
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.projects h2 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 4rem;
+  margin-left: 300px;
+  opacity: 0.8;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.02);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow:
+    0 20px 60px -15px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(124, 58, 237, 0.2);
+}
+
+/* Image Section */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .projectImage {
+  transform: scale(1.05);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Card Content */
+.cardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: var(--foreground);
+}
+
+.card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tech Stack */
+.techList {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.techList li {
+  font-size: 0.75rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.card:hover .techList li {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Card Actions */
+.cardActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.primaryCta,
+.secondaryCta {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.primaryCta {
+  background: var(--accent);
+  color: #020617;
+}
+
+.primaryCta:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+}
+
+.secondaryCta {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--foreground);
+}
+
+.secondaryCta:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* View All Button */
+.viewAllWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.viewAllBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--foreground);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.viewAllBtn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 20px;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageWrapper {
+    height: 160px;
+  }
+
+  .cardContent {
+    padding: 1.25rem;
+  }
+}

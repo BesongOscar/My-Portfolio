@@ -1,3 +1,4 @@
+/* ======================= HERO ======================= */
 .hero {
   min-height: calc(100vh - 80px);
   padding: 0 110px;
@@ -6,22 +7,69 @@
   flex-direction: row;
   justify-content: space-between;
   position: relative;
-}
-/* left section */
-.content{
-    max-width: var(--container-width);
-    padding: 0 1.5rem;
+  overflow: hidden;
+  isolation: isolate;
+ /* ensures z-index works properly with overlays */
 }
 
-.intro{
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.5rem;
+/* === Layering above dot grid and overlays === */
+.content,
+.imageContainer,
+.scrollIndicator {
+  position: relative;
+  z-index: 10; /* high enough to always appear above overlays */
+}
+
+/* === Dark radial overlay for depth === */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === Grain / noise texture === */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/noise.png"); /* use noise image, not me.jpg */
+  opacity: 0.04;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* === Dot grid canvas === */
+.dotGridCanvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ======================= LEFT SECTION ======================= */
+.content {
+  max-width: var(--container-width);
+  padding: 0 1.5rem;
+}
+.content h2{
+  background: linear-gradient(135deg, var(--accent) 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.intro {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 
 .name {
   font-size: clamp(2.8rem, 6vw, 3.8rem);
-  line-height: 1.0;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 .name span {
@@ -42,7 +90,7 @@
 .actions {
   display: flex;
   gap: 1rem;
-  margin-top: 2.0rem;
+  margin-top: 2rem;
 }
 
 .primaryBtn {
@@ -51,10 +99,12 @@
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
   font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .primaryBtn:hover {
   background: var(--accent-hover);
+  transform: translateY(-3px);
 }
 
 .secondaryBtn {
@@ -62,14 +112,16 @@
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
   color: var(--text-primary);
+  transition: all 0.3s ease;
 }
 
 .secondaryBtn:hover {
   border-color: var(--accent);
   color: var(--accent);
+  transform: translateY(-3px);
 }
 
-/* Social media icons */
+/* ======================= SOCIALS ======================= */
 .socials {
   display: flex;
   gap: 1rem;
@@ -95,22 +147,24 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* right section */
-.image{
-    height: 350px;
-    width: 350px;
-    border-radius: 175px;
-}
-.imageContainer{
-    border: var(--accent) solid 1px;
-    padding: 0 50;
-    border-radius: 225px;
-    height: 450px;
-    width: 450px;
-    align-content: center;
+/* ======================= RIGHT SECTION ======================= */
+.image {
+  height: 350px;
+  width: 350px;
+  border-radius: 175px;
 }
 
-/* Scroll indicator */
+.imageContainer {
+  border: var(--accent) solid 1px;
+  padding: 0 50px;
+  border-radius: 225px;
+  height: 450px;
+  width: 450px;
+  align-content: center;
+  box-shadow: 0 0 80px rgba(124, 58, 237, 0.15);
+}
+
+/* ======================= SCROLL INDICATOR ======================= */
 .scrollIndicator {
   position: absolute;
   bottom: 2rem;
@@ -126,17 +180,17 @@
   opacity: 1;
 }
 
-/* Responsive styles */
+/* ======================= RESPONSIVE ======================= */
 @media (max-width: 1024px) {
   .hero {
     padding: 0 60px;
   }
-  
+
   .imageContainer {
     height: 350px;
     width: 350px;
   }
-  
+
   .image {
     height: 280px;
     width: 280px;
@@ -150,31 +204,31 @@
     min-height: auto;
     gap: 3rem;
   }
-  
+
   .content {
     padding: 0;
     text-align: center;
   }
-  
+
   .actions {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .socials {
     justify-content: center;
   }
-  
+
   .imageContainer {
     height: 300px;
     width: 300px;
   }
-  
+
   .image {
     height: 240px;
     width: 240px;
   }
-  
+
   .scrollIndicator {
     position: static;
     transform: none;

@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import DotGridBackground from "@/components/DotGridBackground";
 
 // Configure Geist Sans font with CSS variable for global usage
 const geistSans = Geist({
@@ -80,6 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+         <DotGridBackground />
         {/* Skip to main content link for accessibility */}
         <a href="#main-content" className="skip-to-content">
           Skip to main content
