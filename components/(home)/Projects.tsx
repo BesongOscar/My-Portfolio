@@ -1,6 +1,6 @@
 "use client";
 import styles from "./Projects.module.css";
-import { motion, useInView, easeOut } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { useRef } from "react";
 import Image from "next/image";
@@ -55,14 +55,14 @@ export default function Projects() {
     },
   };
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
+        ease: 'easeOut',
       },
     },
   };

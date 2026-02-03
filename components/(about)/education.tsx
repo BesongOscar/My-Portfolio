@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 import { GraduationCap, Award, MapPin } from "lucide-react";
 import styles from "./education.module.css";
 import { useRef } from "react";
@@ -37,7 +37,7 @@ export default function Education() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const slideVariants = {
+  const slideVariants: Variants = {
     hiddenLeft: {
       opacity: 0,
       x: -60,
@@ -51,7 +51,7 @@ export default function Education() {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
+        ease: 'easeOut',
       },
     },
   };
