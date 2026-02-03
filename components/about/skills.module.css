@@ -241,7 +241,10 @@
   .skillsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
-
+  .resultCount{
+    text-align: center;
+    align-items: center;
+  }
   .subtitle {
     font-size: 1rem;
   }

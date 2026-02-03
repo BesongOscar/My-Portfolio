@@ -1,9 +1,9 @@
 "use client";
 import styles from "./about.module.css";
-import Education from "@/components/(about)/education";
-import Experience from "@/components/(about)/experience";
-import Hero from "@/components/(about)/hero";
-import Skills from "@/components/(about)/skills";
+import Education from "@/components/about/education";
+import Experience from "@/components/about/experience";
+import Hero from "@/components/about/hero";
+import Skills from "@/components/about/skills";
 
 export default function About() {
   return (

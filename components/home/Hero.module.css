@@ -235,8 +235,3 @@
     margin-top: 2rem;
   }
 }
-@media (max-width: 480px) {
-    .image{
-      padding: 50;
-    }
-}
