@@ -1,7 +1,7 @@
 "use client";
 import styles from "./Contact.module.css";
 import { Mail, Github, Linkedin, MapPin, Clock } from "lucide-react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, cubicBezier } from "framer-motion";
 import { useRef } from "react";
 
 const contactMethods = [
@@ -55,7 +55,7 @@ export default function Contact() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.42, 0, 0.58, 1], // cubic-bezier for easeOut
+        ease: cubicBezier(0.42, 0, 0.58, 1), // cubic-bezier for easeOut
       },
     },
   };

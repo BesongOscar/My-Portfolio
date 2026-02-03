@@ -1,6 +1,6 @@
 "use client";
 import styles from "./Skills.module.css";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, cubicBezier } from "framer-motion";
 import { Monitor, Smartphone, Server, Wrench } from "lucide-react";
 import { useRef } from "react";
 
@@ -76,7 +76,7 @@ export default function Skills() {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.46, 0.45, 0.94],
+        ease: cubicBezier(0.25, 0.46, 0.45, 0.94),
       },
     },
   };

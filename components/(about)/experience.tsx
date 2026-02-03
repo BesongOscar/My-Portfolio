@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, easeOut, useInView } from "framer-motion";
+import { motion, easeOut, useInView, cubicBezier } from "framer-motion";
 import styles from "./experience.module.css";
 import { Briefcase, MapPin, Calendar, ExternalLink, Award } from "lucide-react";
 import { useRef } from "react";
@@ -64,7 +64,7 @@ export default function Experience() {
       x: 0,
       transition: {
         duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: cubicBezier(0.25, 0.1, 0.25, 1)
       },
     },
   };
