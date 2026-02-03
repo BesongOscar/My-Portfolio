@@ -179,9 +179,6 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  .subtitle{
-    margin-left: 0;
-  }
   .card {
     padding: 1.5rem;
   }

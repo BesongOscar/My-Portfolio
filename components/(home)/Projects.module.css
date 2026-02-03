@@ -263,7 +263,9 @@
   .imageWrapper {
     height: 160px;
   }
-
+  .subtitle{
+    margin-left: 0;
+  }
   .cardContent {
     padding: 1.25rem;
   }
