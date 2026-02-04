@@ -119,7 +119,7 @@ export default function Availability() {
           transition={{ delay: 0.7, duration: 0.6 }}
         >
           <a
-            href="https://calendly.com/yourusername" // Replace with your Calendly link
+            href="https://calendly.com/wildeo963" // Replace with your Calendly link
             target="_blank"
             rel="noopener noreferrer"
             className={styles.bookButton}

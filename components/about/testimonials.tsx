@@ -6,27 +6,27 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    role: "CEO, TechStart Inc.",
+    name: "Ojong Franck",
+    role: "Software Engineer",
     image: "/testimonials/sarah.jpg", // Add your images
     text: "Oscar delivered an exceptional e-commerce platform that exceeded our expectations. His attention to detail and communication throughout the project was outstanding.",
     rating: 5,
     project: "E-commerce Platform",
   },
   {
-    name: "Michael Chen",
-    role: "Founder, AppVenture",
+    name: "Chiatah Rayan",
+    role: "Software Engineer",
     image: "/testimonials/michael.jpg",
     text: "Working with Oscar was a breeze. He transformed our mobile app idea into reality with clean code and beautiful UI. Highly recommend!",
-    rating: 5,
+    rating: 4,
     project: "Mobile App Development",
   },
   {
-    name: "Emma Williams",
-    role: "Marketing Director, BrandCo",
+    name: "Williams Junior",
+    role: "CEO, Dora Mpeh Tech Services",
     image: "/testimonials/emma.jpg",
     text: "Our website redesign was completed on time and within budget. Oscar's expertise in Next.js helped us achieve lightning-fast performance.",
-    rating: 5,
+    rating: 4,
     project: "Website Redesign",
   },
 ];
@@ -105,7 +105,7 @@ export default function Testimonials() {
         >
           <h3>Want to be my next success story?</h3>
           <p>Let's build something amazing together</p>
-          <a href="#contact-form" className={styles.ctaButton}>
+          <a href="/Contact" className={styles.ctaButton}>
             Start Your Project
           </a>
         </motion.div>

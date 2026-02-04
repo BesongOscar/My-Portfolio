@@ -4,6 +4,7 @@ import Education from "@/components/about/education";
 import Experience from "@/components/about/experience";
 import Hero from "@/components/about/hero";
 import Skills from "@/components/about/skills";
+import Testimonials from "@/components/about/testimonials";
 
 export default function About() {
   return (
@@ -12,6 +13,8 @@ export default function About() {
       <Skills />
       {/* Education Timeline */}
       <Education />
+      {/* Testimonials */}
+      <Testimonials/>
       {/* Experience Timeline */}
       <Experience />
     </section>

@@ -77,7 +77,7 @@ export default function Hero() {
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <a
-              href="/resume.pdf"
+              href="/Besong Oscar-Wilde.pdf"
               download="Besong_Oscar_Resume.pdf"
               className={styles.tertiaryBtn}
             >

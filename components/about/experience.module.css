@@ -339,6 +339,9 @@
     max-width: 100%;
     padding: 2rem 1.5rem;
   }
+  .cardHeader{
+     margin-top: 20px;
+  }
 
   .currentBadge {
     top: 0.75rem;
@@ -387,4 +390,5 @@
   .achievement small {
     font-size: 0.8rem;
   }
+  
 }

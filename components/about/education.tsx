@@ -6,22 +6,6 @@ import styles from "./education.module.css";
 import { useRef } from "react";
 
 const education = [
-  // {
-  //   year: "2014–2020",
-  //   school: "PSS Douala",
-  //   location: "Douala, Cameroon",
-  //   degree: "Ordinary Levels",
-  //   achievement: "Intro to the fundamentals of computer science",
-  //   color: "#3b82f6", // Blue
-  // },
-  // {
-  //   year: "2021–2023",
-  //   school: "PSS Douala",
-  //   location: "Douala, Cameroon",
-  //   degree: "A Levels",
-  //   achievement: "Specialized in Science & Tech",
-  //   color: "#8b5cf6", // Purple
-  // },
   {
     year: "2023–2025",
     school: "University of Buea",

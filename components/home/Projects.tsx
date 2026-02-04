@@ -13,7 +13,7 @@ const projects = [
     tech: ["Next.js", "CSS", "Framer Motion"],
     image: "/projects/portfolio.jpg", // Add your project images
     demoUrl: "https://your-portfolio.com",
-    githubUrl: "https://github.com/yourusername/portfolio",
+    githubUrl: "https://github.com/BesongOscar/My-Portfolio",
     category: "Web",
     //gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
   },
@@ -24,7 +24,7 @@ const projects = [
     tech: ["React Native", "Expo"],
     image: "/projects/camhotel.jpg",
     demoUrl: null, // Mobile app - no demo URL
-    githubUrl: "https://github.com/yourusername/camhotel",
+    githubUrl: "https://github.com/BesongOscar/camhotel-mobileapp",
     category: "Mobile",
    // gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
   },
@@ -35,7 +35,7 @@ const projects = [
     tech: ["Next.js", "MongoDB", "React"],
     image: "/projects/events.jpg",
     demoUrl: "https://your-events-app.com",
-    githubUrl: "https://github.com/yourusername/events",
+    githubUrl: "https://github.com/BesongOscar/Dev-events-nextjsApp",
     category: "Web",
     //gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
   },

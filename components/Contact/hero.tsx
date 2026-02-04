@@ -25,8 +25,8 @@ const contactMethods = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+237 XXX XXX XXX", // Add your phone
-    href: "tel:+237XXXXXXXXX",
+    value: "+237 693 377 876", // Add your phone
+    href: "tel:+237893377876",
     color: "#10b981",
   },
   {
