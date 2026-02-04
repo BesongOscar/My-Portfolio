@@ -16,7 +16,7 @@ export default function Resume() {
             Download my resume to see my complete professional background.
           </p>
           <a
-            href="/resume.pdf"
+            href="/Besong Oscar-Wilde.pdf"
             download="Besong_Oscar_Resume.pdf"
             className={styles.downloadBtn}
           >

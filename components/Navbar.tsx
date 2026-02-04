@@ -94,7 +94,7 @@ export default function Navbar() {
 
           {/* Download Resume Button */}
           <motion.a
-            href="/resume.pdf"
+            href="/Besong Oscar-Wilde.pdf"
             download="Besong_Oscar_Resume.pdf"
             className={styles.downloadBtn}
             whileHover={{ scale: 1.05 }}
@@ -163,7 +163,7 @@ export default function Navbar() {
                 transition={{ delay: 0.4 }}
               >
                 <motion.a
-                  href="/resume.pdf"
+                  href="/Besong Oscar-Wilde.pdf"
                   download="Besong_Oscar_Resume.pdf"
                   className={styles.mobileDownloadBtn}
                   onClick={() => setIsMenuOpen(false)}

@@ -17,18 +17,6 @@ export default function Hero() {
   return (
     <section className={styles.hero} ref={ref}>
       <div className={styles.container}>
-        {/* Breadcrumbs */}
-        <motion.nav
-          className={styles.breadcrumbs}
-          initial={{ opacity: 0, y: -10 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.4 }}
-        >
-          <Link href="/">Home</Link>
-          <span>/</span>
-          <span>About</span>
-        </motion.nav>
-
         {/* Main Heading */}
         <motion.h1
           className={styles.title}

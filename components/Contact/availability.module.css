@@ -1,0 +1,251 @@
+.availabilitySection {
+  padding: 6rem 1.5rem;
+  position: relative;
+}
+
+/* Top divider */
+.availabilitySection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 600px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-color),
+    transparent
+  );
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Meeting Types */
+.meetingTypes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.meetingCard {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.meetingCard:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.meetingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+.meetingCard h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.5rem;
+  color: var(--foreground);
+}
+
+.duration {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.meetingCard p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1rem 0 0;
+}
+
+/* Time Slots */
+.timeSlotsContainer {
+  max-width: 700px;
+  margin: 0 auto 4rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+}
+
+.timeSlots {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.timeSlot {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.timeSlot:hover {
+  border-color: var(--accent);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.slotIcon {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.slotContent h4 {
+  font-size: 1.1rem;
+  margin: 0 0 0.35rem;
+  color: var(--foreground);
+}
+
+.slotContent p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 0.25rem;
+}
+
+.slotContent small {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+/* CTA */
+.ctaContainer {
+  text-align: center;
+}
+
+.bookButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: var(--accent);
+  color: #020617;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.bookButton:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+}
+
+.note {
+  margin-top: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-left: 380;
+}
+
+.note a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.note a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .availabilitySection {
+    padding: 4rem 1.5rem;
+  }
+
+  .meetingTypes {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .meetingCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .timeSlots {
+    grid-template-columns: 1fr;
+  }
+
+  .timeSlot {
+    padding: 1.5rem;
+  }
+  .note{
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .availabilitySection {
+    padding: 3rem 1rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .note {
+    font-size: 0.85rem;
+  }
+}

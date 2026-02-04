@@ -235,6 +235,9 @@
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
+  .resultCount{
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {

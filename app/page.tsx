@@ -11,13 +11,13 @@ import Contact from "@/components/home/Contacts";
  */
 export default function Home() {
   return (
-   <>
+   <div style={{width: '100%'}}>
    <Hero/>
    <About/>
    <Skills/>
    <Projects/>
    <Resume/>
    <Contact/>
-   </>
+   </div>
   );
 }
