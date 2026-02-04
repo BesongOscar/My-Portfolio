@@ -177,6 +177,7 @@
   color: var(--text-secondary);
   font-size: 1.05rem;
   margin: 0 0 2rem;
+  margin-left: 300px;
 }
 
 .ctaButton {
@@ -221,6 +222,9 @@
   .ctaBox h3 {
     font-size: 1.5rem;
   }
+  .ctaBox p{
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -234,5 +238,8 @@
 
   .testimonialText {
     font-size: 1rem;
+  }
+  .cta p{
+    margin-left: 0;
   }
 }
