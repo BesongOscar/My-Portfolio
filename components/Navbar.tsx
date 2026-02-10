@@ -15,8 +15,8 @@ export default function Navbar() {
   // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollTop = window.scrollY; //how many pics is scrolled from the top
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight; //Total scrollable height
       const progress = (scrollTop / docHeight) * 100;
       
       setScrolled(scrollTop > 50);
@@ -35,7 +35,7 @@ export default function Navbar() {
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";  //if true background is unscrollable
     } else {
       document.body.style.overflow = "unset";
     }

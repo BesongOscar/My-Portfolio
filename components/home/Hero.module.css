@@ -17,7 +17,7 @@
 .imageContainer,
 .scrollIndicator {
   position: relative;
-  z-index: 10; /* high enough to always appear above overlays */
+
 }
 
 /* === Dark radial overlay for depth === */
@@ -34,7 +34,11 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: url("/noise.png"); /* use noise image, not me.jpg */
+  /* background-image: url("/noise.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y:  bottom;
   opacity: 0.04;
   z-index: 1;
   pointer-events: none;
@@ -64,16 +68,6 @@
   color: var(--accent);
   font-weight: 500;
   margin-bottom: 0.5rem;
-}
-
-.name {
-  font-size: clamp(2.8rem, 6vw, 3.8rem);
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-.name span {
-  color: var(--accent);
 }
 
 .role {
@@ -169,7 +163,7 @@
   position: absolute;
   bottom: 2rem;
   left: 50%;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   color: var(--accent);
   cursor: pointer;
   opacity: 0.8;
@@ -177,7 +171,7 @@
 }
 
 .scrollIndicator:hover {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 /* ======================= RESPONSIVE ======================= */

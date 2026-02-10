@@ -12,7 +12,7 @@ const projects = [
       "A personal portfolio showcasing my skills, projects, and experience.",
     tech: ["Next.js", "CSS", "Framer Motion"],
     image: "/projects/portfolio.jpg", // Add your project images
-    demoUrl: "https://your-portfolio.com",
+    demoUrl: "https://my-portfolio-eight-gold-47.vercel.app/",
     githubUrl: "https://github.com/BesongOscar/My-Portfolio",
     category: "Web",
     //gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",

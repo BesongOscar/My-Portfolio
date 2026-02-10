@@ -3,7 +3,7 @@
   position: relative;
 }
 
-/* Optional: Add top divider */
+/* top divider */
 .skills::before {
   content: "";
   position: absolute;

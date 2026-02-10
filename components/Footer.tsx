@@ -10,10 +10,7 @@ const footerLinks = {
     { label: "Projects", href: "/Projects" },
     { label: "Contact", href: "/Contact" },
   ],
-  legal: [
-    { label: "Privacy Policy", href: "/privacy" },
-    { label: "Terms of Service", href: "/terms" },
-  ],
+  
 };
 
 const socialLinks = [
@@ -85,23 +82,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Legal Links */}
-          <div className={styles.linksSection}>
-            <h4>Legal</h4>
-            <ul>
-              {footerLinks.legal.map((link) => (
-                <li key={link.label}>
-                  <a href={link.href}>{link.label}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          
 
           {/* CTA Section */}
           <div className={styles.ctaSection}>
             <h4>Let's Connect</h4>
             <p>Have a project in mind?</p>
-            <a href="/#contact" className={styles.ctaButton}>
+            <a href="/Contact" className={styles.ctaButton}>
               Get In Touch
             </a>
           </div>

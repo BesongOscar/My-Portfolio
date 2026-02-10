@@ -54,7 +54,7 @@
 
 /* Highlight inline text */
 .highlight {
-  color: var(--accent, #7c3aed);
+  color: var(--accent,);
   font-weight: 600;
   position: relative;
 }
