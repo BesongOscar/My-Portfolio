@@ -4,7 +4,6 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import DotGridBackground from "@/components/DotGridBackground";
-import { Analytics } from "@vercel/analytics/next"
 
 // Configure Geist Sans font with CSS variable for global usage
 const geistSans = Geist({

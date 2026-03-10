@@ -3,7 +3,6 @@ import styles from "./Projects.module.css";
 import { motion, useInView, Variants } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { useRef } from "react";
-import Image from "next/image";
 
 const projects = [
   {
@@ -87,7 +86,7 @@ export default function Projects() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.title}
               className={styles.card}

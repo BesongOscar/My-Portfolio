@@ -70,9 +70,9 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 id="contact-heading">Let's Work Together</h2>
+          <h2 id="contact-heading">Let&apos;s Work Together</h2>
           <p className={styles.subtitle}>
-            I'm open to opportunities, collaborations, and interesting
+            I&apos;m open to opportunities, collaborations, and interesting
             conversations. Feel free to reach out.
           </p>
 

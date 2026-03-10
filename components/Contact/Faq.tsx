@@ -51,7 +51,7 @@ export default function FAQ() {
         >
           <h2 className={styles.title}>Frequently Asked Questions</h2>
           <p className={styles.subtitle}>
-            Find answers to common questions. Don't see yours? Feel free to ask!
+            Find answers to common questions. Don&apos;t see yours? Feel free to ask!
           </p>
         </motion.div>
 
@@ -100,7 +100,7 @@ export default function FAQ() {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           <h3>Still have questions?</h3>
-          <p>Can't find the answer you're looking for? Send me a message!</p>
+          <p>Can&apos;t find the answer you&apos;re looking for? Send me a message!</p>
           <a href="#contact-form" className={styles.ctaButton}>
             Ask Your Question
           </a>

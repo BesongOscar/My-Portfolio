@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Hero.module.css";
 import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 import { motion } from "framer-motion";
@@ -22,7 +23,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          Hi, I'm
+          Hi, I&apos;m
         </motion.h3>
 
         {/* Premium Text Reveal */}
@@ -108,10 +109,13 @@ export default function Hero() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
       >
-        <img
-          src="me.jpg"
+        <Image
+          src="/me.jpg"
           alt="Besong Oscar - Software Developer"
+          width={500}
+          height={500}
           className={styles.image}
+          priority
         />
       </motion.div>
 

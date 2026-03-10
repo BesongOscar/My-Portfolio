@@ -46,7 +46,7 @@ export default function Testimonials() {
         >
           <h2 className={styles.title}>Client Testimonials</h2>
           <p className={styles.subtitle}>
-            Don't just take my word for it. Here's what clients say about working with me.
+            Don&apos;t just take my word for it. Here&apos;s what clients say about working with me.
           </p>
         </motion.div>
 
@@ -104,7 +104,7 @@ export default function Testimonials() {
           transition={{ delay: 0.6, duration: 0.6 }}
         >
           <h3>Want to be my next success story?</h3>
-          <p>Let's build something amazing together</p>
+          <p>Let&apos;s build something amazing together</p>
           <a href="/Contact" className={styles.ctaButton}>
             Start Your Project
           </a>

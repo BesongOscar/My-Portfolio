@@ -86,7 +86,7 @@ export default function Footer() {
 
           {/* CTA Section */}
           <div className={styles.ctaSection}>
-            <h4>Let's Connect</h4>
+            <h4>Let&apos;s Connect</h4>
             <p>Have a project in mind?</p>
             <a href="/Contact" className={styles.ctaButton}>
               Get In Touch

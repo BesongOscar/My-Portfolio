@@ -56,7 +56,7 @@ export default function Availability() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
-          <h2 className={styles.title}>Let's Schedule a Call</h2>
+          <h2 className={styles.title}>Let&apos;s Schedule a Call</h2>
           <p className={styles.subtitle}>
             Book a free consultation to discuss your project. No commitment required.
           </p>

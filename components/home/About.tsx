@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import styles from "./About.module.css";
 import { motion, useInView } from "framer-motion";
 import { Code2, Rocket, Users, Award } from "lucide-react";
@@ -49,7 +49,7 @@ export default function About() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            I'm a passionate software developer with expertise in building
+            I&apos;m a passionate software developer with expertise in building
             modern web and mobile applications. With a strong foundation in
             frontend technologies like <span className={styles.highlight}>Next.js</span> and{" "}
             <span className={styles.highlight}>React</span>, I create seamless
@@ -64,7 +64,7 @@ export default function About() {
           >
             My journey in software development has equipped me with skills
             across the full stack, from crafting responsive interfaces to
-            building robust backend systems. I'm constantly learning and
+            building robust backend systems. I&apos;m constantly learning and
             adapting to new technologies to deliver innovative solutions.
           </motion.p>
           
@@ -74,7 +74,7 @@ export default function About() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            When I'm not coding, I enjoy exploring new frameworks, contributing
+            When I&apos;m not coding, I enjoy exploring new frameworks, contributing
             to open-source projects, and sharing knowledge with the developer
             community.
           </motion.p>

@@ -104,7 +104,7 @@ export default function Hero() {
       
       // Reset success message after 5 seconds
       setTimeout(() => setFormState("idle"), 5000);
-    } catch (error) {
+    } catch {
       setFormState("error");
       setTimeout(() => setFormState("idle"), 5000);
     }
@@ -133,9 +133,9 @@ export default function Hero() {
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
       >
-        <h1 className={styles.title}>Let's Connect</h1>
+        <h1 className={styles.title}>Let&apos;s Connect</h1>
         <p className={styles.subtitle}>
-          Have a project in mind or just want to chat? I'd love to hear from you.
+          Have a project in mind or just want to chat? I&apos;d love to hear from you.
         </p>
       </motion.div>
 
@@ -305,7 +305,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
               >
                 <CheckCircle size={18} />
-                Message sent successfully! I'll get back to you soon.
+                Message sent successfully! I&apos;ll get back to you soon.
               </motion.div>
             )}
 

@@ -87,7 +87,7 @@ export default function Skills() {
           {(Object.keys(categoryLabels) as Array<keyof typeof categoryLabels>).map((filter) => (
             <button
               key={filter}
-              onClick={() => setActiveFilter(filter as any)}
+              onClick={() => setActiveFilter(filter as SkillCategory | "all")}
               className={`${styles.filterBtn} ${
                 activeFilter === filter ? styles.active : ""
               }`}
