@@ -87,12 +87,12 @@ export default function Education() {
                   }}
                 />
 
-                {/* Current badge
+                {/* Current badge */}
                 {edu.current && (
                   <div className={styles.currentBadge}>
                     <span>Current</span>
                   </div>
-                )} */}
+                )}
 
                 {/* Marker at top of card */}
                 <span className={styles.marker}>

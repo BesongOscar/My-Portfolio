@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import styles from '../components/home/Hero.module.css'
+import styles from '@/components/home/Hero.module.css'
 
 export default function DotGridBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);

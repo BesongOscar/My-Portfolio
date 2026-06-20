@@ -70,14 +70,14 @@ export default function Hero() {
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href="/Contact" className={styles.secondaryBtn}>
+            <Link href="/contact" className={styles.secondaryBtn}>
               Contact Me
             </Link>
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <a
-              href="/Besong Oscar-Wilde.pdf"
+              href="/Besong_Oscar_Wilde_CV.pdf"
               download="Besong_Oscar_Resume.pdf"
               className={styles.tertiaryBtn}
             >

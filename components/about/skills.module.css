@@ -153,9 +153,6 @@
   font-size: 1rem;
   color: var(--foreground);
 }
-.resultCount{
-  margin-left: 400px;
-}
 
 /* Proficiency Bar */
 .proficiency {
@@ -234,9 +231,6 @@
   .filterBtn {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
-  }
-  .resultCount{
-    margin-left: 0;
   }
 }
 

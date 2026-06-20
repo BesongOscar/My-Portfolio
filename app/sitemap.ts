@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://yourwebsite.com";
+  const baseUrl = siteConfig.baseUrl;
 
   return [
     {

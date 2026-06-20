@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import DotGridBackground from "@/components/DotGridBackground";
+import { siteConfig } from "@/lib/siteConfig";
 
 // Configure Geist Sans font with CSS variable for global usage
 const geistSans = Geist({
@@ -19,6 +20,7 @@ const geistMono = Geist_Mono({
 
 // Enhanced metadata for SEO and social sharing
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: "Besong Oscar - Software Developer Portfolio",
     template: "%s | Besong Oscar",
@@ -41,18 +43,25 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
+    url: siteConfig.baseUrl,
     title: "Besong Oscar - Software Developer Portfolio",
     description:
       "Software Developer specializing in modern web applications with Next.js, React, and mobile development with React Native and Flutter.",
     siteName: "Besong Oscar Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Besong Oscar - Software Developer Portfolio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Besong Oscar - Software Developer Portfolio",
     description:
       "Software Developer specializing in modern web applications with Next.js, React, and mobile development with React Native and Flutter.",
-    creator: "@yourtwitterhandle",
   },
   robots: {
     index: true,

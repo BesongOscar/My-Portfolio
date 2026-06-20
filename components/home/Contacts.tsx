@@ -3,13 +3,14 @@ import styles from "./Contact.module.css";
 import { Mail, Github, Linkedin, MapPin, Clock } from "lucide-react";
 import { motion, useInView, cubicBezier } from "framer-motion";
 import { useRef } from "react";
+import { siteConfig } from "@/lib/siteConfig";
 
 const contactMethods = [
   {
     title: "Email",
     icon: Mail,
-    value: "Wildeo963@gmail.com",
-    href: "mailto:wildeo963@gmail.com",
+    value: siteConfig.contact.email,
+    href: `mailto:${siteConfig.contact.email}`,
     label: "Send Email",
     primary: true,
     color: "#ffffff",
@@ -18,7 +19,7 @@ const contactMethods = [
     title: "GitHub",
     icon: Github,
     value: "BesongOscar",
-    href: "https://github.com/BesongOscar",
+    href: siteConfig.socials.find((s) => s.name === "GitHub")!.href,
     label: "View GitHub",
     primary: false,
     color: "#ffffff",
@@ -27,10 +28,10 @@ const contactMethods = [
     title: "LinkedIn",
     icon: Linkedin,
     value: "Besong Oscar-Wilde",
-    href: "https://www.linkedin.com/in/besong-oscar-wilde-272a6a336/",
+    href: siteConfig.socials.find((s) => s.name === "LinkedIn")!.href,
     label: "Connect on LinkedIn",
     primary: false,
-    color: "#fffff",
+    color: "#ffffff",
   },
 ];
 
@@ -132,11 +133,11 @@ export default function Contact() {
         >
           <div className={styles.infoItem}>
             <MapPin size={20} />
-            <span>Douala, Cameroon</span>
+            <span>{siteConfig.contact.location}</span>
           </div>
           <div className={styles.infoItem}>
             <Clock size={20} />
-            <span>WAT (GMT+1)</span>
+            <span>{siteConfig.contact.timezone}</span>
           </div>
         </motion.div>
       </div>

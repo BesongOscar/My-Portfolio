@@ -13,26 +13,27 @@ import {
   MapPin,
   Phone
 } from "lucide-react";
+import { siteConfig } from "@/lib/siteConfig";
 
 const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "wildeo963@gmail.com",
-    href: "mailto:wildeo963@gmail.com",
+    value: siteConfig.contact.email,
+    href: `mailto:${siteConfig.contact.email}`,
     color: "#7c3aed",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+237 693 377 876", // Add your phone
-    href: "tel:+237893377876",
+    value: siteConfig.contact.phone,
+    href: siteConfig.contact.phoneTel,
     color: "#10b981",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "Douala, Cameroon",
+    value: siteConfig.contact.location,
     href: null,
     color: "#3b82f6",
   },
@@ -42,14 +43,14 @@ const socialLinks = [
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/BesongOscar",
-    color: "#ffffff",
+    href: siteConfig.socials.find((s) => s.name === "GitHub")!.href,
+    color: siteConfig.socials.find((s) => s.name === "GitHub")!.color,
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/besong-oscar-wilde-272a6a336/",
-    color: "#0077b5",
+    href: siteConfig.socials.find((s) => s.name === "LinkedIn")!.href,
+    color: siteConfig.socials.find((s) => s.name === "LinkedIn")!.color,
   },
 ];
 
@@ -96,13 +97,18 @@ export default function Hero() {
     
     setFormState("loading");
     
-    // Simulate API call - Replace with your actual form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
       setFormState("success");
       setFormData({ name: "", email: "", message: "" });
       
-      // Reset success message after 5 seconds
       setTimeout(() => setFormState("idle"), 5000);
     } catch {
       setFormState("error");

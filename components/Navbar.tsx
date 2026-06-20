@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import styles from "./Navbar.module.css";
 import { Download, Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { siteConfig } from "@/lib/siteConfig";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,9 +16,9 @@ export default function Navbar() {
   // Handle scroll effects
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY; //how many pics is scrolled from the top
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight; //Total scrollable height
-      const progress = (scrollTop / docHeight) * 100;
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
       
       setScrolled(scrollTop > 50);
       setScrollProgress(progress);
@@ -44,12 +45,7 @@ export default function Navbar() {
     }
   }, [isMenuOpen]);
 
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/About", label: "About" },
-    { href: "/Projects", label: "Projects" },
-    { href: "/Contact", label: "Contact" },
-  ];
+  const navLinks = siteConfig.navigation;
 
   return (
     <>
@@ -97,7 +93,7 @@ export default function Navbar() {
 
           {/* Download Resume Button */}
           <motion.a
-            href="/Besong Oscar-Wilde.pdf"
+            href="/Besong_Oscar_Wilde_CV.pdf"
             download="Besong_Oscar_Resume.pdf"
             className={styles.downloadBtn}
             whileHover={{ scale: 1.05 }}
@@ -166,7 +162,7 @@ export default function Navbar() {
                 transition={{ delay: 0.4 }}
               >
                 <motion.a
-                  href="/Besong Oscar-Wilde.pdf"
+                  href="/Besong_Oscar_Wilde_CV.pdf"
                   download="Besong_Oscar_Resume.pdf"
                   className={styles.mobileDownloadBtn}
                   onClick={() => setIsMenuOpen(false)}

@@ -2,37 +2,18 @@
 import styles from "./Footer.module.css";
 import { Github, Linkedin, Mail, ArrowUp, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import { siteConfig } from "@/lib/siteConfig";
 
-const footerLinks = {
-  navigation: [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/About" },
-    { label: "Projects", href: "/Projects" },
-    { label: "Contact", href: "/Contact" },
-  ],
-  
+const iconMap: Record<string, React.ElementType> = {
+  Email: Mail,
+  GitHub: Github,
+  LinkedIn: Linkedin,
 };
 
-const socialLinks = [
-  {
-    name: "Email",
-    icon: Mail,
-    href: "mailto:wildeo963@gmail.com",
-    color: "#7c3aed",
-  },
-  {
-    name: "GitHub",
-    icon: Github,
-    href: "https://github.com/BesongOscar",
-    color: "#ffffff",
-  },
-  {
-    name: "LinkedIn",
-    icon: Linkedin,
-    href: "https://www.linkedin.com/in/besong-oscar-wilde-272a6a336/",
-    color: "#0077b5",
-  },
-];
+const socialLinks = siteConfig.socials.map((s) => ({
+  ...s,
+  icon: iconMap[s.name] ?? Mail,
+}));
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -74,7 +55,7 @@ export default function Footer() {
           <div className={styles.linksSection}>
             <h4>Quick Links</h4>
             <ul>
-              {footerLinks.navigation.map((link) => (
+              {siteConfig.navigation.map((link) => (
                 <li key={link.label}>
                   <a href={link.href}>{link.label}</a>
                 </li>
@@ -88,7 +69,7 @@ export default function Footer() {
           <div className={styles.ctaSection}>
             <h4>Let&apos;s Connect</h4>
             <p>Have a project in mind?</p>
-            <a href="/Contact" className={styles.ctaButton}>
+            <a href="/contact" className={styles.ctaButton}>
               Get In Touch
             </a>
           </div>

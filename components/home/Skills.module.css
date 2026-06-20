@@ -41,8 +41,8 @@
   text-align: center;
   color: var(--text-secondary);
   font-size: 1.1rem;
-  margin-bottom: 4rem;
-  margin-left: 300px;
+  margin: 0 auto 4rem;
+  max-width: 650px;
   opacity: 0.8;
 }
 
@@ -186,7 +186,6 @@
   .subtitle {
     font-size: 1rem;
     margin-bottom: 3rem;
-    margin-left: 0;
   }
 }
 
@@ -194,9 +193,6 @@
   .iconWrapper {
     width: 40px;
     height: 40px;
-  }
-   .subtitle{
-    margin-left: 0;
   }
   .iconWrapper svg {
     width: 20px;
