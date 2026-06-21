@@ -3,46 +3,23 @@ import styles from "./Projects.module.css";
 import { motion, useInView, Variants } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { useRef } from "react";
+import { getFeaturedProjects } from "@/lib/projects";
 
-const projects = [
-  {
-    title: "Developer Portfolio",
-    description:
-      "A personal portfolio showcasing my skills, projects, and experience.",
-    tech: ["Next.js", "CSS", "Framer Motion"],
-    image: "/projects/portfolio.jpg", // Add your project images
-    demoUrl: "https://my-portfolio-eight-gold-47.vercel.app/",
-    githubUrl: "https://github.com/BesongOscar/My-Portfolio",
-    category: "Web",
-    //gradient: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-  },
-  {
-    title: "CamHotel Mobile App",
-    description:
-      "A hotel discovery mobile application built for users in Cameroon.",
-    tech: ["React Native", "Expo"],
-    image: "/projects/camhotel.jpg",
-    demoUrl: null, // Mobile app - no demo URL
-    githubUrl: "https://github.com/BesongOscar/camhotel-mobileapp",
-    category: "Mobile",
-   // gradient: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-  },
-  {
-    title: "Event Management Platform",
-    description:
-      "A web application for creating, managing, and discovering events.",
-    tech: ["Next.js", "MongoDB", "React"],
-    image: "/projects/events.jpg",
-    demoUrl: "https://your-events-app.com",
-    githubUrl: "https://github.com/BesongOscar/Dev-events-nextjsApp",
-    category: "Web",
-    //gradient: "linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)",
-  },
-];
-
+/**
+ * components/home/Projects.tsx
+ * -----------------------------
+ * Homepage "Featured Projects" teaser. Shows the projects flagged
+ * `featured: true` in lib/projects.ts and links to the full /Projects
+ * page (components/Projects/ProjectsGrid.tsx) for the complete list.
+ *
+ * Data previously lived here as its own hardcoded array; it now comes
+ * from lib/projects.ts so the homepage and /Projects page can't drift
+ * out of sync with each other.
+ */
 export default function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const projects = getFeaturedProjects();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -88,22 +65,22 @@ export default function Projects() {
         >
           {projects.map((project) => (
             <motion.div
-              key={project.title}
+              key={project.slug}
               className={styles.card}
               variants={cardVariants}
               whileHover={{ y: -10 }}
             >
               {/* Project Image/Thumbnail */}
               <div className={styles.imageWrapper}>
-                <div 
+                <div
                   className={styles.imagePlaceholder}
                 >
-                  {/* Replace with actual Image component when you have images */}
+                  {/* Replace with actual Image component once screenshots exist under /public/projects */}
                   <span className={styles.categoryBadge}>{project.category}</span>
                 </div>
                 {/* Uncomment when you have actual images:
-                <Image 
-                  src={project.image} 
+                <Image
+                  src={project.image}
                   alt={project.title}
                   fill
                   className={styles.projectImage}
@@ -162,7 +139,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <a href="/projects" className={styles.viewAllBtn}>
+          <a href="/Projects" className={styles.viewAllBtn}>
             View All Projects →
           </a>
         </motion.div>

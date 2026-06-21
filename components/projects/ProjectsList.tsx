@@ -11,7 +11,7 @@ interface Project {
   overview: string;
   image?: string;
   demoUrl?: string | null;
-  githubUrl?: string;
+  githubUrl?: string | null;
   category: string;
 }
 
