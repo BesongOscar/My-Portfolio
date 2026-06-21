@@ -1,6 +1,4 @@
-import styles from "./project.module.css";
-import { projects } from "@/lib/projects";
-import ProjectsList from "@/components/projects/ProjectsList";
+import ProjectsGrid from "@/components/projects/ProjectsGrid";
 
 export const metadata = {
   title: "Projects",
@@ -8,18 +6,5 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
-  return (
-    <section className={styles.projectsPage}>
-      <div className={styles.container}>
-        <div className={styles.header}>
-          <h1 className={styles.title}>Projects</h1>
-          <p className={styles.subtitle}>
-            A collection of work that reflects my learning and experience in
-            software development.
-          </p>
-        </div>
-        <ProjectsList projects={projects} />
-      </div>
-    </section>
-  );
+  return <ProjectsGrid />;
 }
