@@ -105,7 +105,7 @@ export default function Testimonials() {
         >
           <h3>Want to be my next success story?</h3>
           <p>Let&apos;s build something amazing together</p>
-          <a href="/Contact" className={styles.ctaButton}>
+          <a href="/contact" className={styles.ctaButton}>
             Start Your Project
           </a>
         </motion.div>

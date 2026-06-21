@@ -57,10 +57,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 0.6 }}
         >
-          <Link href={"/Projects"} className={styles.primaryBtn}>
+          <Link href={"/projects"} className={styles.primaryBtn}>
             View Projects
           </Link>
-          <Link href={"/Contact"} className={styles.secondaryBtn}>
+          <Link href={"/contact"} className={styles.secondaryBtn}>
             Contact Me
           </Link>
         </motion.div>

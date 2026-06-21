@@ -9,11 +9,11 @@ import { getFeaturedProjects } from "@/lib/projects";
  * components/home/Projects.tsx
  * -----------------------------
  * Homepage "Featured Projects" teaser. Shows the projects flagged
- * `featured: true` in lib/projects.ts and links to the full /Projects
- * page (components/Projects/ProjectsGrid.tsx) for the complete list.
+ * `featured: true` in lib/projects.ts and links to the full /projects
+ * page (components/projects/ProjectsGrid.tsx) for the complete list.
  *
  * Data previously lived here as its own hardcoded array; it now comes
- * from lib/projects.ts so the homepage and /Projects page can't drift
+ * from lib/projects.ts so the homepage and /projects page can't drift
  * out of sync with each other.
  */
 export default function Projects() {
@@ -139,7 +139,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <a href="/Projects" className={styles.viewAllBtn}>
+          <a href="/projects" className={styles.viewAllBtn}>
             View All Projects →
           </a>
         </motion.div>

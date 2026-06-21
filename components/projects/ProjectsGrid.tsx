@@ -9,12 +9,12 @@ import { projects, getProjectCategories, Project, ProjectCategory } from "@/lib/
 /**
  * components/projects/ProjectsGrid.tsx
  * --------------------------------------
- * Full content for the /Projects page: intro header, a category filter
+ * Full content for the /projects page: intro header, a category filter
  * (All / Web / Mobile — built the same way as the filter UI on the About
  * > Skills section), the complete project grid, and a closing CTA that
- * points to /Contact.
+ * points to /contact.
  *
- * Rendered from app/Projects/page.tsx, which is a server component so the
+ * Rendered from app/projects/page.tsx, which is a server component so the
  * page can export real metadata (title/description) — this file stays a
  * client component purely for the filter state + animations.
  *
@@ -134,7 +134,7 @@ export default function ProjectsGrid() {
         >
           <h3>Have a project in mind?</h3>
           <p>I&apos;m always open to discussing new ideas and opportunities.</p>
-          <a href="/Contact" className={styles.ctaButton}>
+          <a href="/contact" className={styles.ctaButton}>
             Let&apos;s Talk
           </a>
         </motion.div>
@@ -156,7 +156,7 @@ function ProjectCard({
     <motion.div className={styles.card} variants={variants} whileHover={{ y: -10 }}>
       {/* Placeholder artwork — swap for next/image once screenshots exist. Links to the project's detail page. */}
       <Link
-        href={`/Projects/${project.slug}`}
+        href={`/projects/${project.slug}`}
         className={styles.imageWrapper}
         aria-label={`View details for ${project.title}`}
       >
@@ -178,7 +178,7 @@ function ProjectCard({
 
       {/* Content */}
       <div className={styles.cardContent}>
-        <Link href={`/Projects/${project.slug}`} className={styles.cardTitleLink}>
+        <Link href={`/projects/${project.slug}`} className={styles.cardTitleLink}>
           <h3>{project.title}</h3>
         </Link>
         <p>{project.description}</p>

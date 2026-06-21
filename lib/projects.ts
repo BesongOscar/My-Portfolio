@@ -8,18 +8,18 @@
  *   - components/home/Projects.tsx (title, description, tech, image, demoUrl, githubUrl, category)
  *
  * Both the homepage "Featured Projects" teaser (components/home/Projects.tsx)
- * and the full /Projects page (components/Projects/ProjectsGrid.tsx) now read
+ * and the full /projects page (components/projects/ProjectsGrid.tsx) now read
  * from this one array, so updating a project here updates it everywhere.
  *
  * `overview` is intentionally longer/more detailed than `description` — it's
- * not used yet, but it's there so a future /Projects/[slug] case-study page
+ * not used yet, but it's there so a future /projects/[slug] case-study page
  * can use it without needing new data.
  */
 
 export type ProjectCategory = "Web" | "Mobile";
 
 export interface Project {
-  /** URL-safe identifier, reserved for a future /Projects/[slug] detail page. */
+  /** URL-safe identifier, reserved for a future /projects/[slug] detail page. */
   slug: string;
   /** Card title. */
   title: string;
@@ -95,7 +95,7 @@ export function getFeaturedProjects(): Project[] {
   return projects.filter((project) => project.featured);
 }
 
-/** Look up a single project by its slug — ready for a future /Projects/[slug] route. */
+/** Look up a single project by its slug — ready for a future /projects/[slug] route. */
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
 }

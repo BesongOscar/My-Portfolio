@@ -6,10 +6,10 @@ import styles from "./ProjectDetail.module.css";
 import { Project, ProjectCategory, projects } from "@/lib/projects";
 
 /**
- * components/Projects/ProjectDetail.tsx
+ * components/projects/ProjectDetail.tsx
  * ----------------------------------------
  * Case-study layout for a single project, rendered by
- * app/Projects/[slug]/page.tsx. Uses the `overview` field from
+ * app/projects/[slug]/page.tsx. Uses the `overview` field from
  * lib/projects.ts as the main body copy — that field existed in the
  * data already but had no page to render it until now.
  *
@@ -34,7 +34,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
   return (
     <section className={styles.detailSection}>
       <div className={styles.container}>
-        <Link href="/Projects" className={styles.backLink}>
+        <Link href="/projects" className={styles.backLink}>
           <ArrowLeft size={16} />
           Back to Projects
         </Link>
@@ -165,7 +165,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
             <h2>More Projects</h2>
             <div className={styles.moreGrid}>
               {otherProjects.map((p) => (
-                <Link key={p.slug} href={`/Projects/${p.slug}`} className={styles.moreCard}>
+                <Link key={p.slug} href={`/projects/${p.slug}`} className={styles.moreCard}>
                   <span
                     className={styles.moreCategoryBadge}
                     style={{ borderColor: `${p.color}60`, color: p.color }}
@@ -190,7 +190,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         >
           <h3>Have a project in mind?</h3>
           <p>I&apos;m always open to discussing new ideas and opportunities.</p>
-          <Link href="/Contact" className={styles.ctaButton}>
+          <Link href="/contact" className={styles.ctaButton}>
             Let&apos;s Talk
           </Link>
         </motion.div>

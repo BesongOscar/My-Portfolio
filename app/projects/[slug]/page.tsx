@@ -4,9 +4,9 @@ import { projects, getProjectBySlug } from "@/lib/projects";
 import ProjectDetail from "@/components/projects/ProjectDetail";
 
 /**
- * app/Projects/[slug]/page.tsx
+ * app/projects/[slug]/page.tsx
  * ------------------------------
- * Route: /Projects/[slug] — e.g. /Projects/portfolio
+ * Route: /projects/[slug] — e.g. /projects/portfolio
  *
  * Server Component. `generateStaticParams` pre-renders one page per
  * project at build time, and `generateMetadata` gives each one its own
