@@ -133,7 +133,7 @@ export default function ProjectsGrid() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h3>Have a project in mind?</h3>
+          <h3 style={{ textAlign: "center" }}>Have a project in mind?</h3>
           <p>I&apos;m always open to discussing new ideas and opportunities.</p>
           <a href="/contact" className={styles.ctaButton}>
             Let&apos;s Talk
