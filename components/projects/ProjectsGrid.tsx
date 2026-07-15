@@ -32,6 +32,7 @@ type FilterValue = "All" | ProjectCategory;
 const categoryIcons: Record<ProjectCategory, typeof Globe> = {
   Web: Globe,
   Mobile: Smartphone,
+  SaaS: Globe,
 };
 
 export default function ProjectsGrid() {

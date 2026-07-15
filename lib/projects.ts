@@ -16,7 +16,7 @@
  * can use it without needing new data.
  */
 
-export type ProjectCategory = "Web" | "Mobile";
+export type ProjectCategory = "Web" | "Mobile"| "SaaS";
 
 export interface Project {
   /** URL-safe identifier, reserved for a future /projects/[slug] detail page. */
@@ -44,18 +44,18 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "portfolio",
-    title: "Developer Portfolio",
+    slug: "janlums",
+    title: "Laundry Management Saas",
     description:
-      "A personal portfolio website built to showcase my skills, projects, and experience.",
+      "JanLunMS is a multi-tenant Laundry Management SaaS platform that streamlines laundry operations, customer self-service, order tracking, inventory management, payments, notifications, and business administration across web and mobile applications.",
     overview:
-      "This project was built to create a clean, professional online presence. It focuses on performance, accessibility, and clear presentation of work.",
-    tech: ["Next.js", "CSS Modules", "Framer Motion"],
-    category: "Web",
-    image: "/projects/portfolio.jpg",
-    demoUrl: "https://my-portfolio-eight-gold-47.vercel.app/",
-    githubUrl: "https://github.com/BesongOscar/My-Portfolio",
-    color: "#7c3aed",
+      "Janlums is a comprehensive laundry management system that streamlines operations for laundry businesses, providing features for order tracking, customer management, and reporting.",
+    tech: ["Next.js", "CSS", "PostgreSQL", "React-Native", "Expo", "NestJS", "TypeScript"],
+    category: "SaaS",
+    image: "/projects/janlums.jpg",
+    demoUrl: null,
+    githubUrl: "https://github.com/BesongOscar/JanLums.git",
+    color: "#f97316",
     featured: true,
   },
   {
@@ -69,9 +69,9 @@ export const projects: Project[] = [
     category: "Mobile",
     image: "/projects/camhotel.jpg",
     demoUrl: null,
-    githubUrl: "https://github.com/BesongOscar/camhotel-mobileapp",
-    color: "#ec4899",
-    featured: true,
+    githubUrl: "https://github.com/BesongOscar/camhotel-mobileapp.git",
+    color: "#0000ee",
+    featured: false,
   },
   {
     slug: "events",
@@ -83,10 +83,25 @@ export const projects: Project[] = [
     tech: ["Next.js", "MongoDB"],
     category: "Web",
     image: "/projects/events.jpg",
-    demoUrl: "https://your-events-app.com",
-    githubUrl: "https://github.com/BesongOscar/Dev-events-nextjsApp",
+    demoUrl: "#",
+    githubUrl: "https://github.com/BesongOscar/Dev-events-nextjsApp.git",
     color: "#3b82f6",
-    featured: true,
+    featured: false,
+  },
+  {
+    slug: "To-Do",
+    title: "To-Do Application",
+    description:
+      "A production-ready task management application inspired by Microsoft To Do, built with React Native, Expo, and Firebase, offering authentication, task organization, and real-time cloud synchronization.",
+    overview:
+      "This application helps users organize their tasks and stay productive with a clean and intuitive interface.",
+    tech: ["React Native", "TypeScript", "Firebase", "Expo"],
+    category: "Mobile",
+    image: "/icon.png",
+    demoUrl: "https://my-portfolio-eight-gold-47.vercel.app/",
+    githubUrl: "https://github.com/BesongOscar/TO-DO-app.git",
+    color: "#0078d4",
+    featured: false,
   },
 ];
 

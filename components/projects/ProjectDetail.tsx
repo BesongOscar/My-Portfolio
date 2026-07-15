@@ -23,6 +23,7 @@ import { Project, ProjectCategory, projects } from "@/lib/projects";
 const categoryIcons: Record<ProjectCategory, typeof Globe> = {
   Web: Globe,
   Mobile: Smartphone,
+  SaaS: Globe,
 };
 
 export default function ProjectDetail({ project }: { project: Project }) {
