@@ -4,7 +4,12 @@ import Link from "next/link";
 import { motion, useInView, AnimatePresence, Variants } from "framer-motion";
 import { ExternalLink, Github, Globe, Smartphone } from "lucide-react";
 import styles from "./ProjectsGrid.module.css";
-import { projects, getProjectCategories, Project, ProjectCategory } from "@/lib/projects";
+import {
+  projects,
+  getProjectCategories,
+  Project,
+  ProjectCategory,
+} from "@/lib/projects";
 
 /**
  * components/projects/ProjectsGrid.tsx
@@ -121,7 +126,11 @@ export default function ProjectsGrid() {
             exit={{ opacity: 0 }}
           >
             {filteredProjects.map((project) => (
-              <ProjectCard key={project.slug} project={project} variants={cardVariants} />
+              <ProjectCard
+                key={project.slug}
+                project={project}
+                variants={cardVariants}
+              />
             ))}
           </motion.div>
         </AnimatePresence>
@@ -133,8 +142,10 @@ export default function ProjectsGrid() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <h3 style={{ textAlign: "center" }}>Have a project in mind?</h3>
-          <p>I&apos;m always open to discussing new ideas and opportunities.</p>
+          <h3>Have a project in mind?</h3>
+          <p style={{ textAlign: "center" }}>
+            I&apos;m always open to discussing new ideas and opportunities.
+          </p>
           <a href="/contact" className={styles.ctaButton}>
             Let&apos;s Talk
           </a>
@@ -154,7 +165,11 @@ function ProjectCard({
   const CategoryIcon = categoryIcons[project.category];
 
   return (
-    <motion.div className={styles.card} variants={variants} whileHover={{ y: -10 }}>
+    <motion.div
+      className={styles.card}
+      variants={variants}
+      whileHover={{ y: -10 }}
+    >
       {/* Placeholder artwork — swap for next/image once screenshots exist. Links to the project's detail page. */}
       <Link
         href={`/projects/${project.slug}`}
@@ -167,7 +182,10 @@ function ProjectCard({
             background: `linear-gradient(135deg, ${project.color}25, ${project.color}05)`,
           }}
         >
-          <CategoryIcon size={40} style={{ color: project.color, opacity: 0.5 }} />
+          <CategoryIcon
+            size={40}
+            style={{ color: project.color, opacity: 0.5 }}
+          />
         </div>
         <span
           className={styles.categoryBadge}
@@ -179,7 +197,10 @@ function ProjectCard({
 
       {/* Content */}
       <div className={styles.cardContent}>
-        <Link href={`/projects/${project.slug}`} className={styles.cardTitleLink}>
+        <Link
+          href={`/projects/${project.slug}`}
+          className={styles.cardTitleLink}
+        >
           <h3>{project.title}</h3>
         </Link>
         <p>{project.description}</p>
