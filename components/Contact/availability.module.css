@@ -35,7 +35,7 @@
 .title {
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,7 +60,7 @@
 .meetingCard {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   transition: all 0.3s ease;
@@ -68,7 +68,7 @@
 
 .meetingCard:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
@@ -92,8 +92,8 @@
 .duration {
   display: inline-block;
   padding: 0.35rem 0.75rem;
-  background: rgba(124, 58, 237, 0.1);
-  border: 1px solid rgba(124, 58, 237, 0.3);
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-shadow);
   border-radius: 20px;
   font-size: 0.85rem;
   color: var(--accent);
@@ -132,7 +132,7 @@
   align-items: center;
   gap: 1.25rem;
   padding: 1.75rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -140,7 +140,7 @@
 
 .timeSlot:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
 }
 
 .slotIcon {
@@ -177,7 +177,7 @@
   gap: 0.5rem;
   padding: 1rem 2rem;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border-radius: 8px;
   font-size: 1.05rem;
   font-weight: 600;
@@ -188,7 +188,7 @@
 .bookButton:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
 .note {

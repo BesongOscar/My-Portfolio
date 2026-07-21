@@ -27,7 +27,7 @@
 .title {
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -58,7 +58,7 @@
   background: linear-gradient(
     180deg,
     var(--accent),
-    rgba(124, 58, 237, 0.3)
+    var(--accent-shadow)
   );
   border-radius: 2px;
   z-index: 0;
@@ -97,7 +97,7 @@
 
 /* Card */
 .card {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   backdrop-filter: blur(10px);
   padding: 2.5rem 2rem;
@@ -114,7 +114,7 @@
 
 .card:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
 }
 
 /* Card gradient overlay */
@@ -145,7 +145,7 @@
   height: 100%;
   border-radius: 50%;
   border: 3px solid var(--background);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+  box-shadow: 0 0 0 3px var(--accent-shadow);
 }
 
 /* Content */
@@ -199,7 +199,7 @@
   align-items: flex-start;
   gap: 0.5rem;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg-hover);
   padding: 0.75rem 1rem;
   border-radius: 8px;
   margin-top: 1rem;

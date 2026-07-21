@@ -45,7 +45,7 @@
 .brandName {
   font-size: 1.5rem;
   margin: 0;
-  background: linear-gradient(135deg, #fff 0%, var(--accent) 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -74,14 +74,14 @@
   height: 40px;
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   transition: all 0.3s ease;
 }
 
 .socialIcon:hover {
   border-color: var(--accent);
-  background: rgba(124, 58, 237, 0.1);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+  background: var(--accent-glow);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 
 /* Links Sections */
@@ -140,7 +140,7 @@
   justify-content: center;
   padding: 0.75rem 1.5rem;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
@@ -152,7 +152,7 @@
 .ctaButton:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
 /* Divider */
@@ -239,20 +239,20 @@
   height: 48px;
   border-radius: 50%;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px var(--accent-shadow);
   transition: all 0.3s ease;
   z-index: 100;
 }
 
 .backToTop:hover {
   background: var(--accent-hover);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+  box-shadow: 0 8px 24px var(--accent-shadow);
   transform: translateY(-4px);
 }
 

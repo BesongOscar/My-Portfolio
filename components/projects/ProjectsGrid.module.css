@@ -41,7 +41,7 @@
 .title {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -72,7 +72,7 @@
   border-radius: 50px;
   border: 1px solid var(--border-color);
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   cursor: pointer;
   font-weight: 500;
   font-size: 0.9rem;
@@ -80,7 +80,7 @@
 }
 
 .filterBtn:hover {
-  background: rgba(124, 58, 237, 0.1);
+  background: var(--accent-glow);
   border-color: var(--accent);
   color: var(--accent);
   transform: translateY(-2px);
@@ -88,9 +88,9 @@
 
 .filterBtn.active {
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border-color: var(--accent);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 
 .count {
@@ -100,7 +100,7 @@
   min-width: 20px;
   height: 20px;
   padding: 0 0.35rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--card-border-subtle);
   border-radius: 10px;
   font-size: 0.75rem;
   font-weight: 600;
@@ -108,7 +108,7 @@
 
 .filterBtn.active .count {
   background: rgba(0, 0, 0, 0.2);
-  color: #020617;
+  color: var(--btn-on-accent);
 }
 
 /* Grid */
@@ -122,7 +122,7 @@
 .card {
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
@@ -133,10 +133,10 @@
 
 .card:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
   box-shadow:
     0 20px 60px -15px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(124, 58, 237, 0.2);
+    0 0 0 1px var(--accent-shadow);
 }
 
 /* Image / placeholder artwork */
@@ -222,7 +222,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg);
   color: var(--text-secondary);
   transition: all 0.2s ease;
 }
@@ -256,13 +256,13 @@
 
 .primaryCta {
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
 }
 
 .primaryCta:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 
 .secondaryCta {
@@ -283,10 +283,10 @@
   padding: 3rem 2rem;
   background: linear-gradient(
     135deg,
-    rgba(124, 58, 237, 0.05),
+    var(--accent-glow),
     rgba(168, 85, 247, 0.05)
   );
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  border: 1px solid var(--accent-shadow);
   border-radius: 16px;
 }
 
@@ -308,7 +308,7 @@
   gap: 0.5rem;
   padding: 1rem 2rem;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.05rem;
@@ -319,7 +319,7 @@
 .ctaButton:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
 /* Responsive */

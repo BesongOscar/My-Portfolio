@@ -89,7 +89,7 @@
 
 .primaryBtn {
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius);
   font-weight: 600;
@@ -155,7 +155,7 @@
   height: 450px;
   width: 450px;
   align-content: center;
-  box-shadow: 0 0 80px rgba(124, 58, 237, 0.15);
+  box-shadow: 0 0 80px var(--accent-glow);
 }
 
 /* ======================= SCROLL INDICATOR ======================= */

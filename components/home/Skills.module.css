@@ -31,7 +31,7 @@
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 0.5rem;
   text-align: center;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -53,7 +53,7 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 2rem;
@@ -65,10 +65,10 @@
 
 .card:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
   box-shadow:
     0 20px 60px -15px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(124, 58, 237, 0.2);
+    0 0 0 1px var(--accent-shadow);
 }
 
 /* Subtle glow effect on card */
@@ -157,7 +157,7 @@
 
 .progressBar {
   height: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--card-bg-hover);
   border-radius: 4px;
   overflow: hidden;
   position: relative;

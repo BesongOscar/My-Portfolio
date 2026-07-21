@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.8);
+  background: var(--navbar-bg);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-color);
   transition: all 0.3s ease;
@@ -10,8 +10,8 @@
 }
 
 .header.scrolled {
-  background: rgba(15, 23, 42, 0.95);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: var(--navbar-bg-scrolled);
+  box-shadow: 0 4px 20px var(--navbar-shadow);
 }
 
 /* Scroll Progress Bar */
@@ -202,7 +202,7 @@
     display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: var(--backdrop-overlay);
     backdrop-filter: blur(4px);
     z-index: 999;
   }
@@ -216,7 +216,7 @@
     right: 0;
     bottom: 0;
     width: min(320px, 85vw);
-    background: rgba(15, 23, 42, 0.98);
+    background: var(--mobile-menu-bg);
     backdrop-filter: blur(20px);
     border-left: 1px solid var(--border-color);
     padding: 6rem 2rem 2rem;
@@ -248,7 +248,7 @@
   .mobileLinks a:hover,
   .mobileLinks a.active {
     color: var(--accent);
-    background: rgba(124, 58, 237, 0.1);
+    background: var(--accent-glow);
   }
 
   .mobileActions {

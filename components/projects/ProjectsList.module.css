@@ -7,7 +7,7 @@
 .card {
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
@@ -18,10 +18,10 @@
 
 .card:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
   box-shadow:
     0 20px 60px -15px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(124, 58, 237, 0.2);
+    0 0 0 1px var(--accent-shadow);
 }
 
 .imageWrapper {
@@ -89,7 +89,7 @@
   padding: 0.4rem 0.8rem;
   border-radius: 20px;
   border: 1px solid var(--border-color);
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg);
   color: var(--text-secondary);
   transition: all 0.2s ease;
 }
@@ -123,13 +123,13 @@
 
 .primaryCta {
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
 }
 
 .primaryCta:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 
 .secondaryCta {

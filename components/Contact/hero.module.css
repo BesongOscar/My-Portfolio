@@ -13,7 +13,7 @@
 .title {
   font-size: clamp(2.5rem, 6vw, 3.5rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -66,14 +66,14 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .methodCard:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
   border-color: var(--accent);
 }
 
@@ -138,20 +138,20 @@ a.methodValue:hover {
   height: 44px;
   border: 1px solid var(--border-color);
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .socialIcon:hover {
   border-color: var(--accent);
-  background: rgba(124, 58, 237, 0.1);
-  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
+  background: var(--accent-glow);
+  box-shadow: 0 4px 12px var(--accent-shadow);
 }
 
 /* Form Container */
 .formContainer {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 2.5rem;
@@ -184,7 +184,7 @@ a.methodValue:hover {
   border-radius: 8px;
   border: 1px solid var(--border-color);
   font-size: 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-bg);
   color: var(--foreground);
   transition: all 0.3s ease;
   font-family: inherit;
@@ -194,8 +194,8 @@ a.methodValue:hover {
 .form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+  background: var(--card-bg-hover);
+  box-shadow: 0 0 0 3px var(--accent-glow);
 }
 
 .form input.error,
@@ -233,7 +233,7 @@ a.methodValue:hover {
   width: 100%;
   padding: 1rem 1.5rem;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -245,7 +245,7 @@ a.methodValue:hover {
 .submitBtn:hover:not(:disabled) {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
 .submitBtn:disabled {

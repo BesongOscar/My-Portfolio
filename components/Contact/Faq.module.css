@@ -35,7 +35,7 @@
 .title {
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 1rem;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
+  background: linear-gradient(135deg, var(--gradient-title-start) 0%, var(--gradient-title-end) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -58,7 +58,7 @@
 }
 
 .faqItem {
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
@@ -67,7 +67,7 @@
 
 .faqItem:hover {
   border-color: var(--accent);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--card-bg-hover);
 }
 
 /* Question Button */
@@ -102,14 +102,14 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(124, 58, 237, 0.1);
+  background: var(--accent-glow);
   color: var(--accent);
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
 
 .faqQuestion:hover .icon {
-  background: rgba(124, 58, 237, 0.2);
+  background: var(--accent-shadow);
   transform: scale(1.1);
 }
 
@@ -130,8 +130,8 @@
 .ctaBox {
   text-align: center;
   padding: 2.5rem 2rem;
-  background: rgba(124, 58, 237, 0.05);
-  border: 1px solid rgba(124, 58, 237, 0.2);
+  background: var(--accent-glow);
+  border: 1px solid var(--accent-shadow);
   border-radius: 16px;
 }
 
@@ -153,7 +153,7 @@
   gap: 0.5rem;
   padding: 0.875rem 1.75rem;
   background: var(--accent);
-  color: #020617;
+  color: var(--btn-on-accent);
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
@@ -163,7 +163,7 @@
 .ctaButton:hover {
   background: var(--accent-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 8px 24px var(--accent-shadow);
 }
 
 /* Responsive */

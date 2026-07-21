@@ -34,6 +34,18 @@ export default function DotGridBackground() {
     let mouseX = 0;
     let mouseY = 0;
 
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)");
+    const getDotColor = () => isDark.matches
+      ? (opacity: number) => `rgba(255,255,255,${opacity * 0.45})`
+      : (opacity: number) => `rgba(0,0,0,${opacity * 0.15})`;
+
+    let dotColor = getDotColor();
+
+    const onThemeChange = () => {
+      dotColor = getDotColor();
+    };
+    isDark.addEventListener("change", onThemeChange);
+
     const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -46,7 +58,7 @@ export default function DotGridBackground() {
 
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(255,255,255,${opacity * 0.45})`;
+        ctx.fillStyle = dotColor(opacity);
         ctx.fill();
       });
 
@@ -65,6 +77,7 @@ export default function DotGridBackground() {
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      isDark.removeEventListener("change", onThemeChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -73,7 +86,7 @@ export default function DotGridBackground() {
     <canvas 
       ref={canvasRef} 
       className={styles.dotGridCanvas}
-      style={{ pointerEvents: 'none' }} // CRITICAL: This prevents canvas from blocking clicks
+      style={{ pointerEvents: 'none' }}
     />
   );
 }
