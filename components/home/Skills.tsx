@@ -33,8 +33,9 @@ const skillsData = [
     icon: Server,
     color: "#3b82f6", // Blue
     skills: [
-      { name: "Node.js", level: 80 },
-      { name: "MongoDB", level: 75 },
+      { name: "Nest.js", level: 80 },
+      { name: "PostgreSQL", level: 75 },
+      {name: "firebase", level: 70},
     ],
   },
   {

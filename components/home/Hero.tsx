@@ -47,7 +47,7 @@ export default function Hero() {
           transition={{ delay: 0.8, duration: 0.6 }}
         >
           I build modern, scalable web applications with <br />
-          Next.js, React and clean Architecture, alongside <br />
+          Next.js, React, alongside <br />
           Cross platform mobile apps with React-Native and Flutter
         </motion.p>
 

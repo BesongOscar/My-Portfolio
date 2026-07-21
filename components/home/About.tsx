@@ -5,10 +5,10 @@ import { motion, useInView } from "framer-motion";
 import { Code2, Rocket, Users, Award } from "lucide-react";
 
 const stats = [
-  { icon: Code2, label: "Projects Completed", value: "10+", color: "#7c3aed" },
-  { icon: Rocket, label: "Years Experience", value: "3+", color: "#ec4899" },
-  { icon: Users, label: "Happy Clients", value: "15+", color: "#3b82f6" },
-  { icon: Award, label: "Certifications", value: "3+", color: "#10b981" },
+  { icon: Code2, label: "Projects Completed", value: "5+", color: "#7c3aed" },
+  { icon: Rocket, label: "Years Experience", value: "2+", color: "#ec4899" },
+  { icon: Users, label: "Happy Clients", value: "5+", color: "#3b82f6" },
+  { icon: Award, label: "Certifications", value: "1+", color: "#10b981" },
 ];
 
 export default function About() {

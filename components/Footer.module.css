@@ -316,4 +316,8 @@
     flex-direction: column;
     gap: 0.5rem;
   }
+
+  .backToTop {
+    display: none;
+  }
 }
