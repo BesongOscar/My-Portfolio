@@ -13,7 +13,6 @@ const contactMethods = [
     href: `mailto:${siteConfig.contact.email}`,
     label: "Send Email",
     primary: true,
-    color: "#ffffff",
   },
   {
     title: "GitHub",
@@ -22,7 +21,6 @@ const contactMethods = [
     href: siteConfig.socials.find((s) => s.name === "GitHub")!.href,
     label: "View GitHub",
     primary: false,
-    color: "#ffffff",
   },
   {
     title: "LinkedIn",
@@ -31,7 +29,6 @@ const contactMethods = [
     href: siteConfig.socials.find((s) => s.name === "LinkedIn")!.href,
     label: "Connect on LinkedIn",
     primary: false,
-    color: "#ffffff",
   },
 ];
 
@@ -98,14 +95,8 @@ export default function Contact() {
               variants={cardVariants}
               whileHover={{ y: -8 }}
             >
-              <div
-                className={styles.iconWrapper}
-                style={{
-                  background: `${method.color}15`,
-                  borderColor: `${method.color}40`,
-                }}
-              >
-                <method.icon size={32} style={{ color: method.color }} />
+              <div className={styles.iconWrapper}>
+                <method.icon size={32} />
               </div>
 
               <h3>{method.title}</h3>

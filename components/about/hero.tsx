@@ -6,7 +6,7 @@ import { ArrowRight, Download, MapPin, Calendar } from "lucide-react";
 import styles from "./hero.module.css";
 
 const highlights = [
-  { icon: Calendar, label: "3+ Years Experience" },
+  { icon: Calendar, label: "2+ Years Experience" },
   { icon: MapPin, label: "Based in Cameroon" },
 ];
 

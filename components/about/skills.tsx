@@ -14,6 +14,9 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiFirebase,
+  SiPostgresql,
+  SiNestjs,
 } from "react-icons/si";
 import { JSX, useState, useRef } from "react";
 import { useInView } from "framer-motion";
@@ -38,9 +41,9 @@ export default function Skills() {
     { icon: <SiHtml5 />, name: "HTML5", category: "frontend", color: "#E34F26", level: 95 },
     { icon: <SiCss3 />, name: "CSS3", category: "frontend", color: "#1572B6", level: 85 },
     { icon: <SiJavascript />, name: "JavaScript", category: "frontend", color: "#F7DF1E", level: 85 },
-    { icon: <SiNodedotjs />, name: "Nest.js", category: "backend", color: "#339933", level: 80 },
-    { icon: <SiMongodb />, name: "PostgreSQL", category: "backend", color: "#47A248", level: 75 },
-    { icon: <SiMongodb />, name: "Firebase", category: "backend", color: "#FFCA28", level: 70 },
+    { icon: <SiNestjs />, name: "Nest.js", category: "backend", color: "#f20b12", level: 80 },
+    { icon: <SiPostgresql />, name: "PostgreSQL", category: "backend", color: "#2950ce", level: 75 },
+    { icon: <SiFirebase />, name: "Firebase", category: "backend", color: "#bd7108", level: 70 },
     { icon: <SiFlutter />, name: "Flutter", category: "mobile", color: "#02569B", level: 75 },
     { icon: <SiExpo />, name: "React Native", category: "mobile", color: "#000020", level: 85 },
     { icon: <SiGithub />, name: "GitHub", category: "tools", color: "#181717", level: 90 },
