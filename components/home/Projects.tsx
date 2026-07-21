@@ -91,7 +91,7 @@ export default function Projects() {
               {/* Project Content */}
               <div className={styles.cardContent}>
                 <h3>{project.title}</h3>
-                <p>{project.description}</p>
+                <p style={{ textAlign: "center" }}>{project.description}</p>
 
                 {/* Tech Stack */}
                 <ul className={styles.techList}>
