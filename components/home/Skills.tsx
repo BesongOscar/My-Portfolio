@@ -4,18 +4,25 @@ import { motion, useInView, cubicBezier } from "framer-motion";
 import { Monitor, Smartphone, Server, Wrench } from "lucide-react";
 import { useRef } from "react";
 
-// Skills data organized by category with proficiency levels
-const skillsData = [
+// Skills data organized by category. `level` is a plain-language label, not a percentage.
+type SkillLevel = "Advanced" | "Proficient" | "Learning";
+
+const skillsData: {
+  category: string;
+  icon: React.ElementType;
+  color: string;
+  skills: { name: string; level?: SkillLevel }[];
+}[] = [
   {
     category: "Web Frontend",
     icon: Monitor,
     color: "#7c3aed", // Purple
     skills: [
-      { name: "Next.js" },
-      { name: "React" },
-      { name: "HTML" },
-      { name: "CSS" },
-      { name: "JavaScript" },
+      { name: "Next.js", level: "Advanced" },
+      { name: "React", level: "Advanced" },
+      { name: "HTML", level: "Advanced" },
+      { name: "CSS", level: "Advanced" },
+      { name: "JavaScript", level: "Advanced" },
       { name: "TypeScript" },
     ],
   },
@@ -24,9 +31,9 @@ const skillsData = [
     icon: Smartphone,
     color: "#ec4899", // Pink
     skills: [
-      { name: "React Native" },
-      { name: "Flutter" },
-      { name: "Expo" },
+      { name: "React Native", level: "Advanced" },
+      { name: "Flutter", level: "Proficient" },
+      { name: "Expo", level: "Proficient" },
     ],
   },
   {
@@ -34,9 +41,9 @@ const skillsData = [
     icon: Server,
     color: "#3b82f6", // Blue
     skills: [
-      { name: "NestJS" },
-      { name: "PostgreSQL" },
-      {name: "firebase"},
+      { name: "NestJS", level: "Proficient" },
+      { name: "PostgreSQL", level: "Proficient" },
+      { name: "Firebase", level: "Proficient" },
     ],
   },
   {
@@ -44,13 +51,13 @@ const skillsData = [
     icon: Wrench,
     color: "#10b981", // Green
     skills: [
-      { name: "Git" },
-      { name: "GitHub" },
-      { name: "GitLab" },
-      { name: "Vercel" },
-      { name: "PostHog" },
-      { name: "HTTPie" },
-      { name: "WordPress" },
+      { name: "Git", level: "Advanced" },
+      { name: "GitHub", level: "Advanced" },
+      { name: "GitLab", level: "Advanced" },
+      { name: "Vercel", level: "Advanced" },
+      { name: "PostHog", level: "Proficient" },
+      { name: "HTTPie", level: "Proficient" },
+      { name: "WordPress", level: "Proficient" },
     ],
   },
 ];
@@ -91,7 +98,7 @@ export default function Skills() {
   }: {
     category: string;
     icon: React.ElementType;
-    skills: { name: string }[];
+    skills: { name: string; level?: SkillLevel }[];
     color: string;
   }) => {
     return (
@@ -128,6 +135,9 @@ export default function Skills() {
           {skills.map((skill) => (
             <li key={skill.name} className={styles.skillItem}>
               {skill.name}
+              {skill.level && (
+                <span className={styles.skillLevel}>{skill.level}</span>
+              )}
             </li>
           ))}
         </ul>

@@ -204,3 +204,12 @@
     height: 20px;
   }
 }
+
+/* Plain-language level label shown inside each skill chip */
+.skillLevel {
+  margin-left: 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+}

@@ -246,3 +246,10 @@
     font-size: 1rem;
   }
 }
+
+/* Plain-language level label under each skill name */
+.levelLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}

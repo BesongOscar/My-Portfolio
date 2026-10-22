@@ -22,11 +22,14 @@ import { useInView } from "framer-motion";
 
 type SkillCategory = "frontend" | "backend" | "mobile" | "tools";
 
+type SkillLevel = "Advanced" | "Proficient" | "Learning";
+
 interface Skill {
   icon: JSX.Element;
   name: string;
   category: SkillCategory;
   color: string; // Brand color for each skill
+  level?: SkillLevel; // Plain-language level (no percentages)
 }
 
 export default function Skills() {
@@ -34,20 +37,20 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills: Skill[] = [
-    { icon: <SiReact />, name: "React", category: "frontend", color: "#61DAFB" },
-    { icon: <SiNextdotjs />, name: "Next.js", category: "frontend", color: "#000000" },
-    { icon: <SiHtml5 />, name: "HTML5", category: "frontend", color: "#E34F26" },
-    { icon: <SiCss3 />, name: "CSS3", category: "frontend", color: "#1572B6" },
-    { icon: <SiJavascript />, name: "JavaScript", category: "frontend", color: "#F7DF1E" },
+    { icon: <SiReact />, name: "React", category: "frontend", color: "#61DAFB", level: "Advanced" },
+    { icon: <SiNextdotjs />, name: "Next.js", category: "frontend", color: "#000000", level: "Advanced" },
+    { icon: <SiHtml5 />, name: "HTML5", category: "frontend", color: "#E34F26", level: "Advanced" },
+    { icon: <SiCss3 />, name: "CSS3", category: "frontend", color: "#1572B6", level: "Advanced" },
+    { icon: <SiJavascript />, name: "JavaScript", category: "frontend", color: "#F7DF1E", level: "Advanced" },
     { icon: <SiTypescript />, name: "TypeScript", category: "frontend", color: "#3178C6" },
-    { icon: <SiNestjs />, name: "Nest.js", category: "backend", color: "#f20b12" },
-    { icon: <SiPostgresql />, name: "PostgreSQL", category: "backend", color: "#2950ce" },
-    { icon: <SiFirebase />, name: "Firebase", category: "backend", color: "#bd7108" },
-    { icon: <SiFlutter />, name: "Flutter", category: "mobile", color: "#02569B" },
-    { icon: <SiExpo />, name: "React Native", category: "mobile", color: "#000020" },
-    { icon: <SiGithub />, name: "GitHub", category: "tools", color: "#181717" },
-    { icon: <SiVercel />, name: "Vercel", category: "tools", color: "#000000" },
-    { icon: <SiWordpress />, name: "WordPress", category: "tools", color: "#21759B" },
+    { icon: <SiNestjs />, name: "NestJS", category: "backend", color: "#f20b12", level: "Proficient" },
+    { icon: <SiPostgresql />, name: "PostgreSQL", category: "backend", color: "#2950ce", level: "Proficient" },
+    { icon: <SiFirebase />, name: "Firebase", category: "backend", color: "#bd7108", level: "Proficient" },
+    { icon: <SiFlutter />, name: "Flutter", category: "mobile", color: "#02569B", level: "Proficient" },
+    { icon: <SiExpo />, name: "React Native", category: "mobile", color: "#000020", level: "Advanced" },
+    { icon: <SiGithub />, name: "GitHub", category: "tools", color: "#181717", level: "Advanced" },
+    { icon: <SiVercel />, name: "Vercel", category: "tools", color: "#000000", level: "Advanced" },
+    { icon: <SiWordpress />, name: "WordPress", category: "tools", color: "#21759B", level: "Proficient" },
   ];
 
   const [activeFilter, setActiveFilter] = useState<SkillCategory | "all">("all");
@@ -133,6 +136,9 @@ export default function Skills() {
                   </div>
                 </div>
                 <span className={styles.skillName}>{skill.name}</span>
+                {skill.level && (
+                  <span className={styles.levelLabel}>{skill.level}</span>
+                )}
               </motion.div>
             ))}
           </motion.div>
