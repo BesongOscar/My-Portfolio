@@ -179,6 +179,30 @@ export default function Skills() {
             />
           ))}
         </motion.div>
+
+        {/* Proficiency Levels - separate batch from skills */}
+        <motion.div
+          className={styles.levelsSection}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <h3 className={styles.levelsTitle}>Proficiency Levels</h3>
+          <div className={styles.levelsGrid}>
+            <div className={styles.levelCard}>
+              <span className={styles.levelBadge}>Advanced</span>
+              <p className={styles.levelDescription}>Strong working knowledge, comfortable building complex solutions</p>
+            </div>
+            <div className={styles.levelCard}>
+              <span className={styles.levelBadge}>Proficient</span>
+              <p className={styles.levelDescription}>Good working knowledge, can work independently with guidance</p>
+            </div>
+            <div className={styles.levelCard}>
+              <span className={styles.levelBadge}>Learning</span>
+              <p className={styles.levelDescription}>Currently learning and gaining practical experience</p>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

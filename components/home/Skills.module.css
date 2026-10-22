@@ -52,6 +52,87 @@
   gap: 2rem;
 }
 
+/* Proficiency Levels - separate batch from skills */
+.levelsSection {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  position: relative;
+}
+
+.levelsSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  max-width: 400px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border-color),
+    transparent
+  );
+}
+
+.levelsTitle {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.levelsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.levelCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  flex: 1;
+  min-width: 250px;
+  max-width: 280px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.levelCard:hover {
+  border-color: var(--accent);
+  background: var(--card-bg-hover);
+  transform: translateY(-4px);
+}
+
+.levelBadge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--foreground);
+  background: var(--card-bg-hover);
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+}
+
+.levelDescription {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -191,6 +272,25 @@
   .subtitle {
     font-size: 1rem;
     margin-bottom: 3rem;
+  }
+
+  .levelsSection {
+    margin-top: 3rem;
+    padding-top: 2rem;
+  }
+
+  .levelsTitle {
+    font-size: 1.5rem;
+  }
+
+  .levelsGrid {
+    gap: 1rem;
+  }
+
+  .levelCard {
+    min-width: 100%;
+    max-width: 100%;
+    padding: 1.25rem 1.5rem;
   }
 }
 

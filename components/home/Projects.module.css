@@ -27,6 +27,16 @@
   padding: 0 1.5rem;
 }
 
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 4rem;
+  width: 100%;
+}
+
 .projects h2 {
   font-size: clamp(2rem, 5vw, 2.8rem);
   margin-bottom: 0.5rem;
@@ -41,7 +51,7 @@
   text-align: center;
   color: var(--text-secondary);
   font-size: 1.1rem;
-  margin: 0 auto 4rem;
+  margin: 0;
   max-width: 650px;
   opacity: 0.8;
 }

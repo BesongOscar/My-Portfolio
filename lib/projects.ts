@@ -83,7 +83,7 @@ export const projects: Project[] = [
       "This application helps users organize their tasks and stay productive with a clean and intuitive interface.",
     tech: ["React Native", "TypeScript", "Firebase", "Expo"],
     category: "Mobile",
-    image: "/projects/todo.jpg",
+    image: "/icon.png",
     demoUrl: null,
     githubUrl: "https://github.com/BesongOscar/TO-DO-app.git",
     color: "#0078d4",
