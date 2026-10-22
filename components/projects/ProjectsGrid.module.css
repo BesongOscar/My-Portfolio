@@ -139,26 +139,37 @@
     0 0 0 1px var(--accent-shadow);
 }
 
-/* Image / placeholder artwork */
+/* Image / placeholder artwork.
+   The wrapper holds a fixed 16:10 frame so every card's media block is the
+   same height regardless of the screenshot's own dimensions. The placeholder
+   is the base layer (visible while the screenshot loads, and permanently if
+   the file is missing); the screenshot sits on top with object-fit: cover. */
 .imageWrapper {
   display: block;
   position: relative;
   width: 100%;
-  height: 180px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   text-decoration: none;
+  background: var(--card-bg);
 }
 
 .imagePlaceholder {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.4s ease;
 }
 
-.imageWrapper:hover .imagePlaceholder {
+.projectImage {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.imageWrapper:hover .imagePlaceholder,
+.imageWrapper:hover .projectImage {
   transform: scale(1.05);
 }
 
@@ -353,10 +364,6 @@
 @media (max-width: 480px) {
   .projectsSection {
     padding: 3rem 1rem;
-  }
-
-  .imageWrapper {
-    height: 150px;
   }
 
   .cardContent {

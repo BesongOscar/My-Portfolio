@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useInView, AnimatePresence, Variants } from "framer-motion";
 import { ExternalLink, Github, Globe, Smartphone } from "lucide-react";
 import styles from "./ProjectsGrid.module.css";
@@ -23,13 +24,11 @@ import {
  * page can export real metadata (title/description) — this file stays a
  * client component purely for the filter state + animations.
  *
- * NOTE on images: each project in lib/projects.ts has an `image` path
- * under /public/projects/, but those screenshot files don't exist in the
- * repo yet. Rather than render a broken <Image>, cards show a generated
- * gradient + icon placeholder using each project's accent color. Once you
- * add real screenshots, swap the `.imagePlaceholder` block below for a
- * `next/image` using `project.image` — the rest of the layout doesn't
- * need to change.
+ * NOTE on images: each project in lib/projects.ts has an `image` path under
+ * /public/projects/. Cards render that screenshot with `next/image` inside a
+ * fixed 16:10 frame (object-fit: cover). The generated gradient + icon
+ * placeholder is kept as the base layer, so it shows through while the
+ * screenshot loads and takes over completely if the file is missing.
  */
 
 type FilterValue = "All" | ProjectCategory;
@@ -163,6 +162,10 @@ function ProjectCard({
   variants: Variants;
 }) {
   const CategoryIcon = categoryIcons[project.category];
+  // Flips to true when the screenshot fails to load so the card falls back
+  // to the gradient placeholder instead of showing a broken image.
+  const [imageFailed, setImageFailed] = useState(false);
+  const showImage = Boolean(project.image) && !imageFailed;
 
   return (
     <motion.div
@@ -170,7 +173,7 @@ function ProjectCard({
       variants={variants}
       whileHover={{ y: -10 }}
     >
-      {/* Placeholder artwork — swap for next/image once screenshots exist. Links to the project's detail page. */}
+      {/* Screenshot with a gradient placeholder fallback. Links to the project's detail page. */}
       <Link
         href={`/projects/${project.slug}`}
         className={styles.imageWrapper}
@@ -178,6 +181,7 @@ function ProjectCard({
       >
         <div
           className={styles.imagePlaceholder}
+          aria-hidden="true"
           style={{
             background: `linear-gradient(135deg, ${project.color}25, ${project.color}05)`,
           }}
@@ -187,6 +191,18 @@ function ProjectCard({
             style={{ color: project.color, opacity: 0.5 }}
           />
         </div>
+
+        {showImage && (
+          <Image
+            src={project.image}
+            alt={`Screenshot of ${project.title}`}
+            fill
+            sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1088px) calc((100vw - 5rem) / 2), calc((100vw - 8rem) / 3)"
+            className={styles.projectImage}
+            onError={() => setImageFailed(true)}
+          />
+        )}
+
         <span
           className={styles.categoryBadge}
           style={{ borderColor: `${project.color}60` }}

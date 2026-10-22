@@ -30,7 +30,8 @@ export interface Project {
   /** Tech stack tags shown as pills on the card. */
   tech: string[];
   category: ProjectCategory;
-  /** Path to a screenshot/thumbnail under /public. May not exist yet — see note in ProjectsGrid.tsx. */
+  /** Path to a screenshot/thumbnail under /public/projects. Falls back to a
+   *  generated gradient placeholder on the card when the file is missing. */
   image: string;
   /** Live demo URL, or null for projects with no public deployment (e.g. mobile apps). */
   demoUrl: string | null;
@@ -59,21 +60,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    slug: "camhotel",
-    title: "CamHotel Mobile App",
-    description:
-      "A mobile application for discovering hotels and accommodations in Cameroon.",
-    overview:
-      "CamHotel helps users find hotels easily through a simple and intuitive mobile interface, built with a focus on usability and performance.",
-    tech: ["React Native", "Expo"],
-    category: "Mobile",
-    image: "/projects/camhotel.jpg",
-    demoUrl: null,
-    githubUrl: "https://github.com/BesongOscar/camhotel-mobileapp.git",
-    color: "#0000ee",
-    featured: false,
-  },
-  {
     slug: "events",
     title: "Event Management Platform",
     description:
@@ -97,12 +83,27 @@ export const projects: Project[] = [
       "This application helps users organize their tasks and stay productive with a clean and intuitive interface.",
     tech: ["React Native", "TypeScript", "Firebase", "Expo"],
     category: "Mobile",
-    image: "/icon.png",
+    image: "/projects/todo.jpg",
     demoUrl: null,
     githubUrl: "https://github.com/BesongOscar/TO-DO-app.git",
     color: "#0078d4",
     featured: false,
   },
+  {
+    slug: "budget",
+    title: "MyBudget",
+    description:
+      "A personal finance management app that helps users track their income and expenses, set budgets, and visualize their financial health.",
+    overview:
+      "MyBudget is designed to provide users with insights into their spending habits and help them make informed financial decisions.",
+    tech: ["React Native", "TypeScript", "Firebase", "Expo"],
+    category: "Mobile",
+    image: "/projects/budget.png",
+    demoUrl: null,
+    githubUrl: "https://github.com/BesongOscar/MyBudget-app.git",
+    color: "#10b981",
+    featured: false,
+  }
 ];
 
 /** Projects flagged for the homepage teaser section. */
