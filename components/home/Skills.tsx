@@ -11,11 +11,12 @@ const skillsData = [
     icon: Monitor,
     color: "#7c3aed", // Purple
     skills: [
-      { name: "Next.js", level: 90 },
-      { name: "React", level: 90 },
-      { name: "HTML", level: 95 },
-      { name: "CSS", level: 85 },
-      { name: "Javascript", level: 85 },
+      { name: "Next.js" },
+      { name: "React" },
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "JavaScript" },
+      { name: "TypeScript" },
     ],
   },
   {
@@ -23,9 +24,9 @@ const skillsData = [
     icon: Smartphone,
     color: "#ec4899", // Pink
     skills: [
-      { name: "React Native", level: 85 },
-      { name: "Flutter", level: 75 },
-      { name: "Expo", level: 80 },
+      { name: "React Native" },
+      { name: "Flutter" },
+      { name: "Expo" },
     ],
   },
   {
@@ -33,9 +34,9 @@ const skillsData = [
     icon: Server,
     color: "#3b82f6", // Blue
     skills: [
-      { name: "Nest.js", level: 80 },
-      { name: "PostgreSQL", level: 75 },
-      {name: "firebase", level: 70},
+      { name: "NestJS" },
+      { name: "PostgreSQL" },
+      {name: "firebase"},
     ],
   },
   {
@@ -43,13 +44,13 @@ const skillsData = [
     icon: Wrench,
     color: "#10b981", // Green
     skills: [
-      { name: "Git", level: 90 },
-      { name: "GitHub", level: 90 },
-      { name: "Gitlab", level: 85 },
-      { name: "Vercel", level: 85 },
-      { name: "PostHog", level: 70 },
-      { name: "HTTPie", level: 75 },
-      { name: "Wordpress", level: 70 },
+      { name: "Git" },
+      { name: "GitHub" },
+      { name: "GitLab" },
+      { name: "Vercel" },
+      { name: "PostHog" },
+      { name: "HTTPie" },
+      { name: "WordPress" },
     ],
   },
 ];
@@ -90,7 +91,7 @@ export default function Skills() {
   }: {
     category: string;
     icon: React.ElementType;
-    skills: { name: string; level: number }[];
+    skills: { name: string }[];
     color: string;
   }) => {
     return (
@@ -123,58 +124,13 @@ export default function Skills() {
           <h3>{category}</h3>
         </div>
 
-        <div className={styles.skillsList}>
-          {skills.map((skill, index) => (
-            <motion.div
-              key={skill.name}
-              className={styles.skillItem}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ 
-                delay: index * 0.05,
-                duration: 0.4 
-              }}
-              viewport={{ once: true }}
-              whileHover={{ x: 5 }}
-            >
-              <div className={styles.skillInfo}>
-                <span className={styles.skillName}>{skill.name}</span>
-                <span className={styles.skillLevel}>{skill.level}%</span>
-              </div>
-              <div className={styles.progressBar}>
-                <motion.div
-                  className={styles.progressFill}
-                  style={{ 
-                    background: `linear-gradient(90deg, ${color}, ${color}dd)` 
-                  }}
-                  initial={{ width: 0 }}
-                  whileInView={{ width: `${skill.level}%` }}
-                  transition={{ 
-                    duration: 1.2, 
-                    ease: "easeOut",
-                    delay: index * 0.05 
-                  }}
-                  viewport={{ once: true }}
-                />
-                {/* Glowing effect on progress bar */}
-                <motion.div
-                  className={styles.progressGlow}
-                  style={{ 
-                    background: color,
-                    width: `${skill.level}%`
-                  }}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 0.4 }}
-                  transition={{ 
-                    duration: 1.2, 
-                    delay: index * 0.05 
-                  }}
-                  viewport={{ once: true }}
-                />
-              </div>
-            </motion.div>
+        <ul className={styles.skillsList}>
+          {skills.map((skill) => (
+            <li key={skill.name} className={styles.skillItem}>
+              {skill.name}
+            </li>
           ))}
-        </div>
+        </ul>
       </motion.div>
     );
   };

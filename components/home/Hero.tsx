@@ -46,9 +46,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          I build modern, scalable web applications with <br />
-          Next.js, React, alongside <br />
-          Cross platform mobile apps with React-Native and Flutter
+          I build full-stack web and mobile apps with <br />
+          Next.js, React Native and NestJS, <br />
+          from the database to the screen
         </motion.p>
 
         <motion.div

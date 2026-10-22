@@ -2,13 +2,13 @@
 import { useRef } from "react";
 import styles from "./About.module.css";
 import { motion, useInView } from "framer-motion";
-import { Code2, Rocket, Users, Award } from "lucide-react";
+import { Code2, Briefcase, Languages, GraduationCap } from "lucide-react";
 
 const stats = [
-  { icon: Code2, label: "Projects Completed", value: "5+", color: "#7c3aed" },
-  { icon: Rocket, label: "Years Experience", value: "2+", color: "#ec4899" },
-  { icon: Users, label: "Happy Clients", value: "5+", color: "#3b82f6" },
-  { icon: Award, label: "Certifications", value: "1+", color: "#10b981" },
+  { icon: Code2, label: "Projects on GitHub", value: "4", color: "#7c3aed" },
+  { icon: Briefcase, label: "Professional Roles", value: "3", color: "#ec4899" },
+  { icon: Languages, label: "Languages (EN / FR)", value: "2", color: "#3b82f6" },
+  { icon: GraduationCap, label: "BTech Degree", value: "1", color: "#10b981" },
 ];
 
 export default function About() {
@@ -49,11 +49,12 @@ export default function About() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            I&apos;m a passionate software developer with expertise in building
-            modern web and mobile applications. With a strong foundation in
-            frontend technologies like <span className={styles.highlight}>Next.js</span> and{" "}
-            <span className={styles.highlight}>React</span>, I create seamless
-            user experiences that are both functional and visually appealing.
+            I&apos;m a software developer based in Douala, Cameroon, with a BTech in
+            Computer Engineering (Software Engineering) from the University of
+            Buea. I work across the stack: <span className={styles.highlight}>Next.js</span> and{" "}
+            <span className={styles.highlight}>React</span> on the web,{" "}
+            <span className={styles.highlight}>React Native</span> with Expo on mobile, and{" "}
+            <span className={styles.highlight}>NestJS</span> with PostgreSQL on the backend.
           </motion.p>
           
           <motion.p
@@ -62,10 +63,11 @@ export default function About() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            My journey in software development has equipped me with skills
-            across the full stack, from crafting responsive interfaces to
-            building robust backend systems. I&apos;m constantly learning and
-            adapting to new technologies to deliver innovative solutions.
+            I&apos;ve built cross-platform mobile apps professionally at Jan-IT
+            Solution and delivered WordPress websites for clients at Dora Mpeh
+            Tech Services. My largest project, JanLunMS, is a multi-tenant SaaS
+            platform that I designed and built on my own, from the data model to
+            the web and mobile apps.
           </motion.p>
           
           <motion.p
@@ -74,9 +76,9 @@ export default function About() {
               visible: { opacity: 1, y: 0 },
             }}
           >
-            When I&apos;m not coding, I enjoy exploring new frameworks, contributing
-            to open-source projects, and sharing knowledge with the developer
-            community.
+            I care about clean, reusable component architecture and apps that
+            stay fast and easy to maintain. I&apos;m open to full-time and remote
+            opportunities.
           </motion.p>
         </motion.div>
 

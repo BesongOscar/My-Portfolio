@@ -1,8 +1,8 @@
 export const siteConfig = {
-  baseUrl: "https://yourdomain.com",
+  baseUrl: "https://my-portfolio-eight-gold-47.vercel.app",
 
   resume: {
-    href: "/Besong_Oscar_Wilde.pdf",
+    href: "/Besong_Oscar_Wilde_CV.pdf",
     downloadName: "Besong_Oscar_Resume.pdf",
   },
 

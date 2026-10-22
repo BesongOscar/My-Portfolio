@@ -7,13 +7,13 @@ import { useRef } from "react";
 
 const education = [
   {
-    year: "2023–2025",
+    year: "2022 – 2025",
     school: "University of Buea",
     location: "Buea, Cameroon",
-    degree: "B-Tech Computer Engineering",
-    achievement: "Focus on Web & Mobile Development",
+    degree: "BTech Computer Engineering (Software Engineering)",
+    achievement: "College of Technology, specializing in software engineering",
     color: "#ec4899", // Pink
-    current: true, // Add flag for current education
+    current: false,
   },
 ];
 

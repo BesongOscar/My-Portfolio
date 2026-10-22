@@ -6,7 +6,7 @@ import { ArrowRight, Download, MapPin, Calendar } from "lucide-react";
 import styles from "./hero.module.css";
 
 const highlights = [
-  { icon: Calendar, label: "2+ Years Experience" },
+  { icon: Calendar, label: "Open to new opportunities" },
   { icon: MapPin, label: "Based in Cameroon" },
 ];
 
@@ -36,8 +36,8 @@ export default function Hero() {
           animate={isInView ? { opacity: 1, y: 0 } : {}} // FIXED: was y: 20
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          I design and develop high-performance applications using React,
-          Next.js, Flutter, and modern backend tools.
+          I design and develop full-stack web and mobile applications with React,
+          Next.js, React Native, NestJS and PostgreSQL.
         </motion.p>
 
         {/* Highlights */}

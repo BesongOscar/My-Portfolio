@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Besong Oscar",
   },
   description:
-    "Software Developer specializing in modern web applications with Next.js, React, and mobile development with React Native and Flutter. View my projects and get in touch.",
+    "Full-stack JavaScript developer building web apps with Next.js and NestJS and cross-platform mobile apps with React Native. Based in Douala, Cameroon. View my projects and get in touch.",
   keywords: [
     "Software Developer",
     "Web Developer",
@@ -35,6 +35,8 @@ export const metadata: Metadata = {
     "React",
     "React Native",
     "Flutter",
+    "NestJS",
+    "TypeScript",
     "Portfolio",
     "Besong Oscar",
   ],
@@ -46,22 +48,14 @@ export const metadata: Metadata = {
     url: siteConfig.baseUrl,
     title: "Besong Oscar - Software Developer Portfolio",
     description:
-      "Software Developer specializing in modern web applications with Next.js, React, and mobile development with React Native and Flutter.",
+      "Full-stack JavaScript developer: Next.js, NestJS, React Native. Based in Douala, Cameroon.",
     siteName: "Besong Oscar Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Besong Oscar - Software Developer Portfolio",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Besong Oscar - Software Developer Portfolio",
     description:
-      "Software Developer specializing in modern web applications with Next.js, React, and mobile development with React Native and Flutter.",
+      "Full-stack JavaScript developer: Next.js, NestJS, React Native. Based in Douala, Cameroon.",
   },
   robots: {
     index: true,

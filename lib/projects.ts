@@ -45,12 +45,12 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "janlums",
-    title: "Laundry Management Saas",
+    title: "JanLunMS: Multi-Tenant Laundry Management SaaS",
     description:
-      "JanLunMS is a multi-tenant Laundry Management SaaS platform that streamlines laundry operations, customer self-service, order tracking, inventory management, payments, notifications, and business administration across web and mobile applications.",
+      "A multi-tenant SaaS platform that lets laundry businesses run their operations on web and mobile: order tracking, customer self-service, inventory, payments, notifications and business administration. Designed and built solo.",
     overview:
-      "Janlums is a comprehensive laundry management system that streamlines operations for laundry businesses, providing features for order tracking, customer management, and reporting.",
-    tech: ["Next.js", "CSS", "PostgreSQL", "React-Native", "Expo", "NestJS", "TypeScript"],
+      "JanLunMS is a multi-tenant laundry management system designed and built solo, with a Next.js web app, a React Native (Expo) mobile app and a NestJS + PostgreSQL backend.",
+    tech: ["Next.js", "React Native", "Expo", "NestJS", "PostgreSQL", "TypeScript"],
     category: "SaaS",
     image: "/projects/janlums.jpg",
     demoUrl: null,
@@ -89,10 +89,10 @@ export const projects: Project[] = [
     featured: false,
   },
   {
-    slug: "To-Do",
+    slug: "todo",
     title: "To-Do Application",
     description:
-      "A production-ready task management application inspired by Microsoft To Do, built with React Native, Expo, and Firebase, offering authentication, task organization, and real-time cloud synchronization.",
+      "A task management app inspired by Microsoft To Do, built with React Native, Expo and Firebase, with authentication, task organization and real-time cloud sync.",
     overview:
       "This application helps users organize their tasks and stay productive with a clean and intuitive interface.",
     tech: ["React Native", "TypeScript", "Firebase", "Expo"],

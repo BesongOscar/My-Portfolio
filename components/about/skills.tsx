@@ -4,8 +4,6 @@ import styles from "./skills.module.css";
 import {
   SiReact,
   SiNextdotjs,
-  SiNodedotjs,
-  SiMongodb,
   SiFlutter,
   SiWordpress,
   SiGithub,
@@ -14,6 +12,7 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiTypescript,
   SiFirebase,
   SiPostgresql,
   SiNestjs,
@@ -28,7 +27,6 @@ interface Skill {
   name: string;
   category: SkillCategory;
   color: string; // Brand color for each skill
-  level?: number; // Optional proficiency level
 }
 
 export default function Skills() {
@@ -36,19 +34,20 @@ export default function Skills() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const skills: Skill[] = [
-    { icon: <SiReact />, name: "React", category: "frontend", color: "#61DAFB", level: 90 },
-    { icon: <SiNextdotjs />, name: "Next.js", category: "frontend", color: "#000000", level: 90 },
-    { icon: <SiHtml5 />, name: "HTML5", category: "frontend", color: "#E34F26", level: 95 },
-    { icon: <SiCss3 />, name: "CSS3", category: "frontend", color: "#1572B6", level: 85 },
-    { icon: <SiJavascript />, name: "JavaScript", category: "frontend", color: "#F7DF1E", level: 85 },
-    { icon: <SiNestjs />, name: "Nest.js", category: "backend", color: "#f20b12", level: 80 },
-    { icon: <SiPostgresql />, name: "PostgreSQL", category: "backend", color: "#2950ce", level: 75 },
-    { icon: <SiFirebase />, name: "Firebase", category: "backend", color: "#bd7108", level: 70 },
-    { icon: <SiFlutter />, name: "Flutter", category: "mobile", color: "#02569B", level: 75 },
-    { icon: <SiExpo />, name: "React Native", category: "mobile", color: "#000020", level: 85 },
-    { icon: <SiGithub />, name: "GitHub", category: "tools", color: "#181717", level: 90 },
-    { icon: <SiVercel />, name: "Vercel", category: "tools", color: "#000000", level: 85 },
-    { icon: <SiWordpress />, name: "WordPress", category: "tools", color: "#21759B", level: 70 },
+    { icon: <SiReact />, name: "React", category: "frontend", color: "#61DAFB" },
+    { icon: <SiNextdotjs />, name: "Next.js", category: "frontend", color: "#000000" },
+    { icon: <SiHtml5 />, name: "HTML5", category: "frontend", color: "#E34F26" },
+    { icon: <SiCss3 />, name: "CSS3", category: "frontend", color: "#1572B6" },
+    { icon: <SiJavascript />, name: "JavaScript", category: "frontend", color: "#F7DF1E" },
+    { icon: <SiTypescript />, name: "TypeScript", category: "frontend", color: "#3178C6" },
+    { icon: <SiNestjs />, name: "Nest.js", category: "backend", color: "#f20b12" },
+    { icon: <SiPostgresql />, name: "PostgreSQL", category: "backend", color: "#2950ce" },
+    { icon: <SiFirebase />, name: "Firebase", category: "backend", color: "#bd7108" },
+    { icon: <SiFlutter />, name: "Flutter", category: "mobile", color: "#02569B" },
+    { icon: <SiExpo />, name: "React Native", category: "mobile", color: "#000020" },
+    { icon: <SiGithub />, name: "GitHub", category: "tools", color: "#181717" },
+    { icon: <SiVercel />, name: "Vercel", category: "tools", color: "#000000" },
+    { icon: <SiWordpress />, name: "WordPress", category: "tools", color: "#21759B" },
   ];
 
   const [activeFilter, setActiveFilter] = useState<SkillCategory | "all">("all");
@@ -134,24 +133,6 @@ export default function Skills() {
                   </div>
                 </div>
                 <span className={styles.skillName}>{skill.name}</span>
-                
-                {/* Optional: Show proficiency level */}
-                {skill.level && (
-                  <div className={styles.proficiency}>
-                    <div className={styles.proficiencyBar}>
-                      <motion.div
-                        className={styles.proficiencyFill}
-                        style={{ 
-                          background: skill.color,
-                          width: `${skill.level}%`
-                        }}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${skill.level}%` }}
-                        transition={{ delay: index * 0.05 + 0.2, duration: 0.8 }}
-                      />
-                    </div>
-                  </div>
-                )}
               </motion.div>
             ))}
           </motion.div>

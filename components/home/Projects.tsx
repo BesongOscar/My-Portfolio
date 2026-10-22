@@ -3,6 +3,7 @@ import styles from "./Projects.module.css";
 import { motion, useInView, Variants } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { useRef } from "react";
+import Link from "next/link";
 import { getFeaturedProjects } from "@/lib/projects";
 
 /**
@@ -139,9 +140,9 @@ export default function Projects() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.8, duration: 0.6 }}
         >
-          <a href="/projects" className={styles.viewAllBtn}>
+          <Link href="/projects" className={styles.viewAllBtn}>
             View All Projects →
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
